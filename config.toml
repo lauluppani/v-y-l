@@ -1,9 +1,10 @@
 # Site settings
-baseurl = "http://vitiylucas.com/"
+baseurl = "http://replace-this-with-your-hugo-site.com/"
 languageCode = "en-us"
-title = "Viti y Lucas"
+title = "Hugo Agency Theme"
 theme = "hugo-agency-theme"
-
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
 
 [params]
 
@@ -30,7 +31,7 @@ theme = "hugo-agency-theme"
     # - send a dummy email yourself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-	email = "your@email.com"
+	email = "lauluppani@gmail.com"
 
 
 	# Navigation
@@ -57,21 +58,22 @@ theme = "hugo-agency-theme"
 		title = "Services"
 		subtitle = "Lorem ipsum dolor sit amet consectetur."
 
-		[[params.services.list]]
-			icon = "fa-shopping-cart"
-			title = "E-Commerce"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        [[params.services.row]]
 
-		[[params.services.list]]
-			icon = "fa-laptop"
-			title = "Responsive Design"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+            [[params.services.row.list]]
+                icon = "fa-shopping-cart"
+                title = "E-Commerce"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
-		[[params.services.list]]
-			icon = "fa-lock"
-			title = "Web"
-			description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+            [[params.services.row.list]]
+                icon = "fa-laptop"
+                title = "Responsive Design"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
+            [[params.services.row.list]]
+                icon = "fa-lock"
+                title = "Web"
+                description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
 
 	# Portfolio section
 	[params.portfolio]
