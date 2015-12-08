@@ -30,56 +30,132 @@ body{
 /* Nav */
 body header nav.navbar-default {
 	background-color: rgba(255, 237, 222, 0.9);
+    border: 0 none;
+}
+body header nav.navbar-default .navbar-nav > li{
+    height: 50px;
+    padding: 15px 0;
+    width: 33.33333%;
+}
+body header nav.navbar-default .navbar-nav > li > a{
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    color: #CB9540;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 0;
+    text-transform: uppercase;
+}
+body header nav.navbar-default .navbar-nav > li > a:hover, body header nav.navbar-default .navbar-nav > li > a:active, body header nav.navbar-default .navbar-nav > li > a:focus {
+    color: #93B99B;
+}
+body header nav.navbar-default .navbar-nav > li.active > a, body header nav.navbar-default .navbar-nav > li.active > a:hover, body header nav.navbar-default .navbar-nav > li.active > a:focus, body header nav.navbar-default .navbar-nav > li.active > a:active{
+    background: transparent;
+    color: #93B99B;
+}
+body header nav.navbar-default .navbar-nav > li.active > a:hover{
+    color: #7B997F;
 }
 
-/* Logo */
-body nav > .container {
-	position: relative;
+/* Container */
+body header nav.navbar-default > .container {
+    position: relative;
+    padding: 0;
+    width: 100%;
 }
-
 /* Nav LEFT*/
 body nav .nav-left{
 	float: left;
+    width: 40%;
 }
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 850px) {
+    body nav .nav-left {
+        width: 45%;
+    }
+}*/
+@media only screen and (max-width: 850px) {
     body nav .nav-left {
         display: none;
     }
+}
+body nav .nav-left > li{
+    float: right;
 }
 
 /* Logo */
 body nav .container > .navbar-header {
 	font-family: 'abraham_lincolnregular';
-	left: 50%;
-	line-height: 50px;
-	margin: 0 0 0 -40px;
-	position: absolute;
-	width: 80px;
+    width: 20%;
+}
+@media only screen and (max-width: 850px) {
+    body nav .container > .navbar-header {
+        width: 10%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    body nav .container > .navbar-header {
+        margin: 0;
+        width: 100%;
+    }
 }
 body nav .container > .navbar-header a.logo{
-	color: #93B99B;
-	font-size: 30px;
+    color: #93B99B;
+    display: block;
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    position: relative;
+    width: 80px;
 }
-body nav .container > .navbar-header a.logo:hover{
-	opacity: 0.8;
+body nav .container > .navbar-header a.logo span{
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+body nav .container > .navbar-header a.logo:before{
+    -moz-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    -webkit-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+    background: url(../images/banner.svg);
+    content: "";
+    height: 105px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+}
+body nav .container > .navbar-header a.logo:hover span{
+	color: #CB9540;
 	text-decoration: none;
 }
-/* Nav */
-body nav.navbar-default .navbar-nav > li > a{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-	color: #CB9540;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
+body nav .container > .navbar-header a.logo:hover:before{
+    margin-top: -20px;
 }
-body nav.navbar-default .navbar-nav > li > a:hover{
-	color: #93B99B;
-}
+
 /* Nav RIGHT */
 body nav .nav-right{
 	float: right;
+    width: 40%;
 }
-@media only screen and (max-width: 768px) {
+/*@media only screen and (max-width: 850px) {
+    body nav .nav-right {
+        width: 45%;
+    }
+}*/
+@media only screen and (max-width: 850px) {
     body nav .nav-right {
         display: none;
     }
@@ -88,6 +164,14 @@ body nav .nav-right{
  /* Sections */
 body section{
 	min-height: 800px;
+}
+
+body section h1.section-heading{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'abraham_lincolnregular';
+    font-size: 60px;
+    text-transform: uppercase;
 }
 
 /* Hero */
@@ -99,6 +183,10 @@ body section#hero {
     padding-top: 100px;
 }
 
+/* Quote */
+body section#quote {
+    background: #D9BF9D;
+}
 /* Ceremonia */
 body section#ceremonia {
     background: #D9BF9D;
@@ -114,6 +202,10 @@ body section#regalos {
 /* Cómo llegar */
 body section#como_llegar {
     background: #F8B264;
+}
+/* Countdown */
+body section#countdown {
+    background: #93B99B;
 }
 /* Galería */
 body section#galeria {

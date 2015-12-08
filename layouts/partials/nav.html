@@ -2,19 +2,19 @@
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}
             <ul class="nav navbar-nav nav-left">
                 <li>
-                    <a class="page-scroll" href="#ceremonia">{{ with .Site.Params.navigation.ceremonia }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#regalos">{{ with .Site.Params.navigation.regalos }}{{ . }}{{ end }}</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#rsvp">{{ with .Site.Params.navigation.rsvp }}{{ . }}{{ end }}</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#regalos">{{ with .Site.Params.navigation.regalos }}{{ . }}{{ end }}</a>
+                    <a class="page-scroll" href="#ceremonia">{{ with .Site.Params.navigation.ceremonia }}{{ . }}{{ end }}</a>
                 </li>
             </ul>
-            {{ "<!-- /.nav -->" | safeHTML }}        
+            {{ "<!-- /.nav -->" | safeHTML }}
+            {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}  
             <div class="navbar-header page-scroll">
  <!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -22,7 +22,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button> -->
-                <a class="logo page-scroll" href="#page-top">{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}</a>
+                <a class="logo page-scroll" href="#page-top">
+                    <span>{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}</span></a>
             </div>
             {{ "<!-- Collect the nav links, forms, and other content for toggling -->" | safeHTML }}
             <ul class="nav navbar-nav nav-right">
