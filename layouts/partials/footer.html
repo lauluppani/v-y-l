@@ -2,22 +2,18 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <span class="copyright">{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ end }}</span>
+            <div class="col-lg-12 text-center">
+                <h1 class="section-heading">{{ with .Site.Params.footer.title }}{{ . }}{{ end }}</h1>
+                <h2> Usá #vitiylucas en Instagram para ayudarnos a compartir nuestro día especial.</h2>
+                <h3>V&L</h3>
             </div>
-            <div class="col-md-4">
-                <ul class="list-inline social-buttons">
-                    {{ range .Site.Params.footer.social }}
-                    <li><a href="{{ .link }}"><i class="fa {{ .icon }}"></i></a></li>
-                    {{ end }}
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <ul class="list-inline quicklinks">
-                    {{ range .Site.Params.footer.quicklinks }}
-                    <li><a href="{{ .link }}">{{ .text }}</a></li>
-                    {{ end }}
-                </ul>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="">nosotros@vitiylucas.com</a>
+                <p>
+                    <small>©2015 Viti y Lucas. Todos los derechos reservados.</small>
+                </p>
             </div>
         </div>
     </div>

@@ -48,7 +48,9 @@ googleAnalytics = ""
 	[params.hero]
 		title = "Viti y Lucas"
 		subtitle = "Nos casamos!"
-		buttonText = "Agendar"
+		date = "30 • 01 • 2016"
+		buttonText1 = "Agendar"
+		buttonText2 = "RSVP"
 
 
 	# Ceremonia section
@@ -59,26 +61,25 @@ googleAnalytics = ""
     # RSVP section
 	[params.rsvp]
 		title = "RSVP"
-		subtitle  = "Lorem ipsum dolor sit amet consectetur."
+		subtitle  = "Vas a venir?"
 		buttonText = "RSVP"
 
 		# 'warning' defines error messages for invalid inputs
 		[params.rsvp.form.name]
-			text = "Your Name *"
-			warning = "Please enter your name."
+			text = "Nombre *"
+			warning = "Por favor, ingresá tu nombre."
+
+		[params.rsvp.form.lastname]
+			text = "Apellido *"
+			warning = "Por favor, ingresá tu apellido."
 
 		[params.rsvp.form.email]
-			text = "Your Email *"
-			warning = "Please enter your email address."
+			text = "Email *"
+			warning = "Por favor, ingresá tu email."
 
-		[params.rsvp.form.phone]
-			text = "Your Phone *"
+		[params.rsvp.form.song]
+			text = "Cuál es tu canción favorita? *"
 			warning = "Please enter your phone number."
-
-		[params.rsvp.form.message]
-			text = "Your Message *"
-			warning = "Please enter a message."
-
 
 	# Regalos section
 	[params.regalos]
@@ -87,36 +88,13 @@ googleAnalytics = ""
 	# Cómo llegar section
 	[params.como_llegar]
 		title = "Cómo llegar"
+		subtitle = "Dónde quedarse"
 
 	# Galería section
 	[params.galeria]
 		title = "Galería"
 
-	# Vitiylucas section
-	[params.vitiylucas]
-		title = "#Vitiylucas"
-
 
 	# Footer section
 	[params.footer]
-		copyright = "Published under the Apache License 2.0."
-
-		[[params.footer.social]]
-			icon = "fa-twitter"
-			link = "#"
-
-		[[params.footer.social]]
-			icon = "fa-facebook"
-			link = "#"
-
-		[[params.footer.social]]
-			icon = "fa-linkedin"
-			link = "#"
-
-		[[params.footer.quicklinks]]
-			text = "Privacy Policy"
-			link = "#"
-
-		[[params.footer.quicklinks]]
-			text = "Terms of Use"
-			link = "#"
+		title = "Spread the love"
