@@ -130,7 +130,7 @@ body nav .container > .navbar-header a.logo:before{
     -o-transition: margin 0.3s ease;
     -webkit-transition: margin 0.3s ease;
     transition: margin 0.3s ease;
-    background: url(../images/banner.svg);
+    background: url(../images/banner.svg) no-repeat center top;
     content: "";
     height: 105px;
     left: 0;
@@ -163,7 +163,8 @@ body nav .nav-right{
 
  /* Sections */
 body section{
-	min-height: 800px;
+    min-height: 800px;
+	/*height: 100vh;*/
 }
 
 body section h1.section-heading{
@@ -176,11 +177,86 @@ body section h1.section-heading{
 
 /* Hero */
 body section#hero {
+    /*height: 100vh;*/
+    /*min-height: 0;*/
+    /*overflow: hidden;*/
     background: #93B99B;
     color: #EBE2C4;
-    font-family: 'brusherregular';
-    font-size: 100px;
-    padding-top: 100px;
+    padding: 150px 20px 0 20px;
+    position: relative;
+}
+body section#hero .container{
+}
+body section#hero hgroup h1.section-heading {
+    background: url(../images/vitiylucas.svg) no-repeat center center;
+    background-size: 100% 100%;
+    display: block;
+    height: 292px;
+    margin: 0 auto;
+    text-indent: -10000px;
+    width: auto;
+}
+body section#hero hgroup h2 {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #ECE9DC;
+    font-family: 'abraham_lincolnregular';
+    font-size: 60px;
+    text-transform: uppercase;
+}
+body section#hero hgroup h3 {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+body section#hero .actions{
+    margin-top: 40px;
+}
+body section#hero .actions button{
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #7B997F;
+    border-radius: 0;
+    box-shadow: 6px 6px 0 rgba(236, 233, 220, 0.2);
+    color: #ECE9DC;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 12px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}
+body section#hero .actions button:last-child{
+    margin-right: 0;
+}
+body section#hero .actions button:hover{
+    background-color: #CB9540;
+    box-shadow: 0 0 0 transparent;
+}
+body a.arrow-down{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    background: url(../images/arrow-down.svg) no-repeat center center;
+    display: block;
+    height: 38px;
+    left: 50%;
+    margin-left: -6px;
+    position: absolute;
+    text-indent: -10000px;
+    width: 12px;
+    bottom: 30px;
+}
+body a.arrow-down:hover{
+    opacity: 0.5;
 }
 
 /* Quote */

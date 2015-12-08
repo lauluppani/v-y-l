@@ -47,7 +47,7 @@ googleAnalytics = ""
 	# Hero section
 	[params.hero]
 		title = "Viti y Lucas"
-		subtitle = "Nos casamos!"
+		subtitle = "¡Nos casamos!"
 		date = "30 • 01 • 2016"
 		buttonText1 = "Agendar"
 		buttonText2 = "RSVP"

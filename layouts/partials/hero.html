@@ -1,9 +1,11 @@
 {{ "<!-- Hero -->" | safeHTML }}
 <section id="hero">
     <div class="container">
-        <h1 class="section-heading">{{ with .Site.Params.hero.title }}{{ . }}{{ end }}</h1>
-        <h2>{{ with .Site.Params.hero.subtitle }}{{ . }}{{ end }}</h2>
-        <h3>{{ with .Site.Params.hero.date }}{{ . }}{{ end }}</h3>
+    	<hgroup>
+	        <h1 class="section-heading">{{ with .Site.Params.hero.title }}{{ . }}{{ end }}</h1>
+	        <h2>{{ with .Site.Params.hero.subtitle }}{{ . }}{{ end }}</h2>
+	        <h3>{{ with .Site.Params.hero.date }}{{ . }}{{ end }}</h3>
+        </hgroup>
         <div class="actions">
 	        <button type="submit" class="btn btn-xl">{{ with .Site.Params.hero.buttonText1 }}{{ . }}{{ end }}</button>
 	        <button type="submit" class="btn btn-xl">{{ with .Site.Params.hero.buttonText2 }}{{ . }}{{ end }}</button>
