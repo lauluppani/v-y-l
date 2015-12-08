@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'abraham_lincolnregular';
+    src: url('../fonts/abraham-lincoln/abrahamlincoln-webfont.eot');
+    src: url('../fonts/abraham-lincoln/abrahamlincoln-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abraham-lincoln/abrahamlincoln-webfont.woff2') format('woff2'),
+         url('../fonts/abraham-lincoln/abrahamlincoln-webfont.woff') format('woff'),
+         url('../fonts/abraham-lincoln/abrahamlincoln-webfont.ttf') format('truetype'),
+         url('../fonts/abraham-lincoln/abrahamlincoln-webfont.svg#abraham_lincolnregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'brusherregular';
+    src: url('../fonts/brusher/brusher-regular-webfont.eot');
+    src: url('../fonts/brusher/brusher-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brusher/brusher-regular-webfont.woff2') format('woff2'),
+         url('../fonts/brusher/brusher-regular-webfont.woff') format('woff'),
+         url('../fonts/brusher/brusher-regular-webfont.ttf') format('truetype'),
+         url('../fonts/brusher/brusher-regular-webfont.svg#brusherregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body{
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+/* Nav */
+body header nav.navbar-default {
+	background-color: rgba(255, 237, 222, 0.9);
+}
+
+/* Logo */
+body nav > .container {
+	position: relative;
+}
+
+/* Nav LEFT*/
+body nav .nav-left{
+	float: left;
+}
+@media only screen and (max-width: 768px) {
+    body nav .nav-left {
+        display: none;
+    }
+}
+
+/* Logo */
+body nav .container > .navbar-header {
+	font-family: 'abraham_lincolnregular';
+	left: 50%;
+	line-height: 50px;
+	margin: 0 0 0 -40px;
+	position: absolute;
+	width: 80px;
+}
+body nav .container > .navbar-header a.logo{
+	color: #93B99B;
+	font-size: 30px;
+}
+body nav .container > .navbar-header a.logo:hover{
+	opacity: 0.8;
+	text-decoration: none;
+}
+/* Nav */
+body nav.navbar-default .navbar-nav > li > a{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	color: #CB9540;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+body nav.navbar-default .navbar-nav > li > a:hover{
+	color: #93B99B;
+}
+/* Nav RIGHT */
+body nav .nav-right{
+	float: right;
+}
+@media only screen and (max-width: 768px) {
+    body nav .nav-right {
+        display: none;
+    }
+}
+
+ /* Sections */
+body section{
+	min-height: 800px;
+}
+
+/* Hero */
+body section#hero {
+    background: #93B99B;
+    color: #EBE2C4;
+    font-family: 'brusherregular';
+    font-size: 100px;
+    padding-top: 100px;
+}
+
+/* Ceremonia */
+body section#ceremonia {
+    background: #D9BF9D;
+}
+/* RSVP */
+body section#rsvp {
+    background: #EBE2C4;
+}
+/* Regalos */
+body section#regalos {
+    background: #E18C78;
+}
+/* Cómo llegar */
+body section#como_llegar {
+    background: #F8B264;
+}
+/* Galería */
+body section#galeria {
+    background: #A5795B;
+}
+/* Vitiylucas */
+body section#vitiylucas {
+    background: #EBE2C4;
+}
