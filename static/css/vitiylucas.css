@@ -76,11 +76,6 @@ body nav .nav-left{
 	float: left;
     width: 40%;
 }
-/*@media only screen and (max-width: 850px) {
-    body nav .nav-left {
-        width: 45%;
-    }
-}*/
 @media only screen and (max-width: 850px) {
     body nav .nav-left {
         display: none;
@@ -150,15 +145,34 @@ body nav .nav-right{
 	float: right;
     width: 40%;
 }
-/*@media only screen and (max-width: 850px) {
-    body nav .nav-right {
-        width: 45%;
-    }
-}*/
 @media only screen and (max-width: 850px) {
     body nav .nav-right {
         display: none;
     }
+}
+
+/* Buttons */
+body .action-btn{
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: #7B997F;
+    box-shadow: 6px 6px 0 rgba(236, 233, 220, 0.2);
+    color: #ECE9DC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 20px;
+    text-transform: uppercase;
+}
+body .action-btn:hover{
+    background-color: #CB9540;
+    box-shadow: 0 0 0 transparent;
+    color: #ECE9DC;
+    text-decoration: none;
 }
 
  /* Sections */
@@ -184,8 +198,6 @@ body section#hero {
     color: #EBE2C4;
     padding: 150px 20px 0 20px;
     position: relative;
-}
-body section#hero .container{
 }
 body section#hero hgroup h1.section-heading {
     background: url(../images/vitiylucas.svg) no-repeat center center;
@@ -217,28 +229,11 @@ body section#hero .actions{
     margin-top: 40px;
 }
 body section#hero .actions button{
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    background-color: #7B997F;
     border-radius: 0;
-    box-shadow: 6px 6px 0 rgba(236, 233, 220, 0.2);
-    color: #ECE9DC;
-    font-size: 14px;
-    font-weight: 700;
     margin-right: 12px;
-    padding: 8px 20px;
-    text-transform: uppercase;
 }
 body section#hero .actions button:last-child{
     margin-right: 0;
-}
-body section#hero .actions button:hover{
-    background-color: #CB9540;
-    box-shadow: 0 0 0 transparent;
 }
 body a.arrow-down{
     -moz-transition: opacity 0.3s ease;
@@ -263,10 +258,141 @@ body a.arrow-down:hover{
 body section#quote {
     background: #D9BF9D;
 }
+body section#quote h1{
+    background: url(../images/quote.svg) no-repeat center center;
+    background-size: 100% 100%;
+    display: block;
+    height: 600px;
+    margin: 100px auto 0 auto;
+    text-indent: -10000px;
+    width: auto;
+}
+body section#quote img.cupid-heart{
+    margin-top: 20px;
+}
+body section#quote h2{
+    color: #ECE9DC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-top: 120px;
+    text-transform: uppercase;
+}
+body section#quote p{
+    color: #A5795B;
+    font-size: 18px;
+}
+
 /* Ceremonia */
 body section#ceremonia {
     background: #D9BF9D;
+    padding-top: 100px;
+    position: relative;
 }
+body section#ceremonia h1.section-heading{
+    color: #A5795B;
+    margin: 0;
+}
+body section#ceremonia .block{
+    font-size: 0;
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+}
+body section#ceremonia .block:first-of-type{
+    border-bottom: 1px solid rgba(165, 121, 91, 0.3);
+    border-top: 1px solid rgba(165, 121, 91, 0.3);
+    padding: 20px 0;
+}
+body section#ceremonia .block:nth-of-type(2){
+    margin-top: 20px;
+}
+body section#ceremonia .block .text-block{
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    border-right: 1px solid rgba(165, 121, 91, 0.3);
+    font-size: 12px;
+    padding-right: 40px;
+}
+body section#ceremonia .block .text-block:last-of-type{
+    border: 0 none;
+    padding: 0 0 0 40px;
+}
+body section#ceremonia .block .text-block p{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #A5795B;
+    font-family: 'abraham_lincolnregular', sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+body section#ceremonia .block .text-block span{
+    color: #EBE2C4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+body section#ceremonia .block p{
+    color: #A5795B;
+    font-size: 16px;
+}
+body section#ceremonia .block strong{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #EBE2C4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+body section#ceremonia .block strong span{
+    font-weight: 400;
+}
+body section#ceremonia .action-btn{
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    background-color: #F06E5C;
+    font-size: 12px;
+    margin-top: 12px;
+    padding: 12px 25px;
+}
+@media only screen and (max-width: 500px) {
+    body section#ceremonia .action-btn{
+        width: 100%;
+    }
+}
+body section#ceremonia .action-btn:hover{
+    background-color: #DD5C4E;
+}
+body section#ceremonia .action-btn:before, body section#ceremonia .action-btn:after{
+    background-color: rgba(165, 121, 91, 0.3);
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 32px;
+    width: 38%;
+}
+@media only screen and (max-width: 680px) {
+    body section#ceremonia .action-btn:before, body section#ceremonia .action-btn:after{
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    body section#ceremonia .action-btn:before, body section#ceremonia .action-btn:after{
+        display: none;
+    }
+}
+body section#ceremonia .action-btn:before{
+    left: 0;
+}
+body section#ceremonia .action-btn:after{
+    right: 0;
+}
+
+
 /* RSVP */
 body section#rsvp {
     background: #EBE2C4;
