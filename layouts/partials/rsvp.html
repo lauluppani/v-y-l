@@ -1,48 +1,49 @@
 {{ "<!-- RSVP Section -->" | safeHTML }}
 <section id="rsvp">
-    <div class="container">
+    <div class="container col-md-8 col-sm-offset-2">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-md-12 text-center">
                 <h1 class="section-heading">{{ with .Site.Params.rsvp.title }}{{ . }}{{ end }}</h1>
                 <h2 class="section-subheading">{{ with .Site.Params.rsvp.subtitle }}{{ . }}{{ end }}</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12">
-                <form  action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}" method="POST" name="sentMessage" id="rsvpForm" novalidate>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.name.text }}{{ . }}{{ end }}" name="name" required data-validation-required-message="{{ with .Site.Params.rsvp.form.name.warning }}{{ . }}{{ end }}">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.lastname.text }}{{ . }}{{ end }}" name="lastname" required data-validation-required-message="{{ with .Site.Params.rsvp.form.lastname.warning }}{{ . }}{{ end }}">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.email.text }}{{ . }}{{ end }}" name="email" required data-validation-required-message="{{ with .Site.Params.rsvp.form.email.warning }}{{ . }}{{ end }}">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.song.text }}{{ . }}{{ end }}" name="song" required data-validation-required-message="{{ with .Site.Params.rsvp.form.song.warning }}{{ . }}{{ end }}">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-lg-12 text-center">
-                            <div id="success"></div>
-                            <button type="submit" class="btn btn-xl">{{ with .Site.Params.rsvp.buttonText }}{{ . }}{{ end }}</button>
-                            <p>
-                                <small>
-                                    Por favor, confirmá para el
-                                    <strong>4 de enero.</strong>
-                                </small>
-                            </p>    
-                        </div>
+            <form  action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}" method="POST" name="sentMessage" id="rsvpForm" novalidate>
+                <div class="col-md-12">
+                    <div class="form-group col-md-6 radio-1">
+                        <label class="radio-inline"><input type="radio" name="optradio">Cuenten conmigo!</label>
                     </div>
-                </form>
-            </div>
+                    <div class="form-group col-md-6 radio-2">
+                        <label class="radio-inline"><input type="radio" name="optradio">No puedo ir</label>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.name.text }}{{ . }}{{ end }}" name="name" required data-validation-required-message="{{ with .Site.Params.rsvp.form.name.warning }}{{ . }}{{ end }}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.lastname.text }}{{ . }}{{ end }}" name="lastname" required data-validation-required-message="{{ with .Site.Params.rsvp.form.lastname.warning }}{{ . }}{{ end }}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="email" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.email.text }}{{ . }}{{ end }}" name="email" required data-validation-required-message="{{ with .Site.Params.rsvp.form.email.warning }}{{ . }}{{ end }}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.song.text }}{{ . }}{{ end }}" name="song" required data-validation-required-message="{{ with .Site.Params.rsvp.form.song.warning }}{{ . }}{{ end }}">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-xl">{{ with .Site.Params.rsvp.buttonText }}{{ . }}{{ end }}</button>
+                    <p>
+                        <small>
+                            Por favor, confirmá para el
+                            <strong>4 de enero.</strong>
+                        </small>
+                    </p>    
+                </div>
+            </form>
         </div>
     </div>
 </section>
