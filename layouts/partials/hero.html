@@ -7,8 +7,8 @@
 	        <h3>{{ with .Site.Params.hero.date }}{{ . }}{{ end }}</h3>
         </hgroup>
         <div class="actions">
-	        <button type="submit" class="btn btn-xl action-btn">{{ with .Site.Params.hero.buttonText1 }}{{ . }}{{ end }}</button>
-	        <button type="submit" class="btn btn-xl action-btn">{{ with .Site.Params.hero.buttonText2 }}{{ . }}{{ end }}</button>
+	        <!-- <a href="#" class="btn btn-xl action-btn">{{ with .Site.Params.hero.buttonText1 }}{{ . }}{{ end }}</a> -->
+	        <a href="#rsvp" class="btn btn-xl action-btn page-scroll">{{ with .Site.Params.hero.buttonText2 }}{{ . }}{{ end }}</a>
         </div>
         <a href="#quote" class="page-scroll arrow-down"></a>
     </div>

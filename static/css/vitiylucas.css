@@ -193,10 +193,9 @@ body .action-btn.large{
 }
 
  /* Sections */
-body section {
+/*body section {
     min-height: 800px;
-    /*height: 100vh;*/
-}
+}*/
 
 body h1.section-heading {
     -moz-osx-font-smoothing: grayscale;
@@ -208,11 +207,9 @@ body h1.section-heading {
 
 /* Hero */
 body section#hero {
-    /*height: 100vh;*/
-    /*min-height: 0;*/
-    /*overflow: hidden;*/
     background: #93B99B;
     color: #EBE2C4;
+    min-height: 800px;
     padding: 150px 20px 0 20px;
     position: relative;
 }
@@ -245,10 +242,10 @@ body section#hero hgroup h3 {
 body section#hero .actions {
     margin-top: 40px;
 }
-body section#hero .actions button {
+body section#hero .actions a {
     margin-right: 12px;
 }
-body section#hero .actions button:last-child {
+body section#hero .actions a:last-child {
     margin-right: 0;
 }
 body a.arrow-down {
@@ -303,7 +300,6 @@ body section#ceremonia {
     background: #D9BF9D;
     padding-top: 100px;
     position: relative;
-    min-height: 0;
 }
 body section#ceremonia h1.section-heading {
     color: #A5795B;
@@ -413,7 +409,6 @@ body section#ceremonia .action-btn:after {
 body section#rsvp {
     background: #EBE2C4;
     color: #BF967A;
-    min-height: 0;
     padding: 100px 0;
 }
 body section#rsvp > .container{
@@ -508,7 +503,6 @@ body section#regalos {
     background: #E18C78;
     color: #ECE9DC;
     font-size: 20px;
-    min-height: 0;
     padding: 100px 0;
 }
 body section#regalos img.rose {
@@ -533,7 +527,6 @@ body section#regalos .action-btn:hover{
 body section#como_llegar {
     background: #F8B264;
     color: #BF967A;
-    min-height: 0;
     padding: 50px 0;
 }
 body section#como_llegar .container .row > .direcciones  {
@@ -629,7 +622,6 @@ body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suit
 /* Countdown */
 body section#countdown {
     background: #93B99B;
-    min-height: 0;
     padding: 50px 0;
 }
 body section#countdown h1.section-heading{
@@ -640,7 +632,6 @@ body section#countdown h1.section-heading{
 /* Galería */
 body section#galeria {
     background: #A5795B;
-    min-height: 0;
     padding: 50px 0;
 }
 body section#galeria h1.section-heading{
