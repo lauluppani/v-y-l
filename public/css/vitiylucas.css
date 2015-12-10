@@ -23,13 +23,13 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
 }
 
 /* Nav */
 body header nav.navbar-default {
-    background-color: rgba(255, 237, 222, 0.9);
+	background-color: rgba(255, 237, 222, 0.9);
     border: 0 none;
 }
 body header nav.navbar-default .navbar-nav > li {
@@ -73,7 +73,7 @@ body header nav.navbar-default > .container {
 }
 /* Nav LEFT*/
 body nav .nav-left {
-    float: left;
+	float: left;
     width: 40%;
 }
 @media only screen and (max-width: 850px) {
@@ -87,7 +87,7 @@ body nav .nav-left > li{
 
 /* Logo */
 body nav .container > .navbar-header {
-    font-family: 'abraham_lincolnregular';
+	font-family: 'abraham_lincolnregular';
     width: 20%;
 }
 @media only screen and (max-width: 850px) {
@@ -133,8 +133,8 @@ body nav .container > .navbar-header a.logo:before {
     width: 80px;
 }
 body nav .container > .navbar-header a.logo:hover span {
-    color: #CB9540;
-    text-decoration: none;
+	color: #CB9540;
+	text-decoration: none;
 }
 body nav .container > .navbar-header a.logo:hover:before {
     margin-top: -20px;
@@ -142,7 +142,7 @@ body nav .container > .navbar-header a.logo:hover:before {
 
 /* Nav RIGHT */
 body nav .nav-right {
-    float: right;
+	float: right;
     width: 40%;
 }
 @media only screen and (max-width: 850px) {
@@ -160,7 +160,6 @@ body .action-btn {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: #7B997F;
-    border-radius: 0;
     box-shadow: 6px 6px 0 rgba(236, 233, 220, 0.2);
     color: #ECE9DC;
     font-family: 'Montserrat', sans-serif;
@@ -175,17 +174,11 @@ body .action-btn:hover {
     color: #ECE9DC;
     text-decoration: none;
 }
-body .action-btn:active, body .action-btn:focus {
-    -webkit-appearance: none;
-    color: #ECE9DC;
-    outline: none;
-}
-
 
  /* Sections */
 body section {
     min-height: 800px;
-    /*height: 100vh;*/
+	/*height: 100vh;*/
 }
 
 body section h1.section-heading {
@@ -236,6 +229,7 @@ body section#hero .actions {
     margin-top: 40px;
 }
 body section#hero .actions button {
+    border-radius: 0;
     margin-right: 12px;
 }
 body section#hero .actions button:last-child {
@@ -402,14 +396,13 @@ body section#ceremonia .action-btn:after {
 /* RSVP */
 body section#rsvp {
     background: #EBE2C4;
-    color: #BF967A;
     min-height: 0;
     padding: 100px 0;
 }
 body section#rsvp > .container{
     background: #ECE9DC;
     float: none;
-    padding: 30px 80px;
+    padding: 50px 80px;
     position: relative;
 }
 @media only screen and (max-width: 768px) {
@@ -443,57 +436,8 @@ body section#rsvp h2.section-subheading {
     font-size: 36px;
 }
 body section#rsvp .radio-1, body section#rsvp .radio-2 {
-    font-size: 16px;
-    text-align: left;
-    margin: 15px 0 15px 0;
-}
-body section#rsvp .form-group input{
-    margin-bottom: 10px;
-}
-body section#rsvp .form-group input{
-    -moz-transition: border 0.3s ease;
-    -o-transition: border 0.3s ease;
-    -webkit-transition: border 0.3s ease;
-    transition: border 0.3s ease;    
-    border-radius: 0;
-    border: 2px solid rgba(147, 185, 155, 0.4);
-    box-shadow: 0 0 0 transparent;
-    font-size: 14px;
-    padding: 25px 10px;
-}
-body section#rsvp .form-group input:focus{
-    border: 2px solid rgba(147, 185, 155, 0.8);
-}
-body section#rsvp .form-group p.help-block.text-danger{
-    font-size: 12px;
     text-align: left;
 }
-body section#rsvp .form-group p.help-block.text-danger ul{
-    margin: 0;
-    padding: 0 0 0 10px;
-}
-body section#rsvp .form-group p.help-block.text-danger ul li{
-    color: #F06E5C;
-    list-style: none;
-}
-body section#rsvp .action-btn{
-    background-color: #93B99B;
-    box-shadow: 6px 6px 0 rgba(191, 150, 122, 0.2);
-    font-size: 22px;
-    margin: 10px 0 20px 0;
-    min-width: 280px;
-    padding: 20px 40px;
-}
-body section#rsvp .action-btn:hover{
-    background-color: #BF967A;
-    box-shadow: 0 0 0 transparent;
-}
-body section#rsvp p small{
-    color: #93B99B;
-    font-size: 12px;
-}
-
-
 /* Regalos */
 body section#regalos {
     background: #E18C78;

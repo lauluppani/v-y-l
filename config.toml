@@ -78,7 +78,7 @@ googleAnalytics = ""
 			warning = "Por favor, ingresá tu email."
 
 		[params.rsvp.form.song]
-			text = "Cuál es tu canción favorita? *"
+			text = "Cuál es tu canción favorita?"
 			warning = "Please enter your phone number."
 
 	# Regalos section
