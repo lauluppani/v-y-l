@@ -153,6 +153,11 @@ body nav .nav-right {
 
 /* Buttons */
 body .action-btn {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -179,8 +184,13 @@ body .action-btn:active, body .action-btn:focus {
     -webkit-appearance: none;
     color: #ECE9DC;
     outline: none;
+    text-decoration: none;
 }
-
+body .action-btn.large{
+    font-size: 22px;
+    min-width: 280px;
+    padding: 20px 40px;
+}
 
  /* Sections */
 body section {
@@ -479,10 +489,7 @@ body section#rsvp .form-group p.help-block.text-danger ul li{
 body section#rsvp .action-btn{
     background-color: #93B99B;
     box-shadow: 6px 6px 0 rgba(191, 150, 122, 0.2);
-    font-size: 22px;
     margin: 10px 0 20px 0;
-    min-width: 280px;
-    padding: 20px 40px;
 }
 body section#rsvp .action-btn:hover{
     background-color: #BF967A;
@@ -496,8 +503,33 @@ body section#rsvp p small{
 
 /* Regalos */
 body section#regalos {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     background: #E18C78;
+    color: #ECE9DC;
+    font-size: 20px;
+    min-height: 0;
+    padding: 100px 0;
 }
+body section#regalos img.rose {
+    margin: 20px 0 35px 0;
+}
+body section#regalos strong{
+    display: block;
+    font-family: 'brusherregular';
+    font-size: 34px;
+    padding: 10px 0;
+}
+body section#regalos .action-btn{
+    background-color: #93B99B;
+    margin-top: 20px;
+}
+body section#regalos .action-btn:hover{
+    background-color: #7B997F;
+}
+
+
+
 /* Cómo llegar */
 body section#como_llegar {
     background: #F8B264;
