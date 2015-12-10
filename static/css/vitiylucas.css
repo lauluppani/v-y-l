@@ -529,11 +529,103 @@ body section#regalos .action-btn:hover{
 }
 
 
-
 /* Cómo llegar */
 body section#como_llegar {
     background: #F8B264;
+    color: #BF967A;
+    min-height: 0;
+    padding: 50px 0;
 }
+body section#como_llegar .container .row > .direcciones  {
+    background: #ECE9DC;
+    padding: 25px 40px;
+}
+body section#como_llegar .container .row > .direcciones h1.section-heading {
+    color: #7B997F;
+}
+body section#como_llegar .container .row > .direcciones i{
+    color: #E18C78;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion{
+    font-size: 20px;
+    line-height: 22px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong > span{
+    font-weight: 400;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong + span{
+    font-size: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #BF967A;
+}
+body section#como_llegar .container .row > .direcciones p.instruccion{
+    padding-top: 20px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles{
+    font-size: 0;
+    padding: 0;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li{
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    list-style: none;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    display: block;
+    font-size: 11px;
+    text-indent: -10000px;
+    margin: 0 10px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a:hover{
+    opacity: 0.5;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#ibis{
+    background: url(../images/ibis.svg) no-repeat center center;
+    height: 52px;
+    width: 52px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#camberland{
+    background: url(../images/camberland.jpg) no-repeat center center;
+    height: 34px;
+    width: 210px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#howard-johnson{
+    background: url(../images/howard-johnson.svg) no-repeat center center;
+    height: 44px;
+    width: 138px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#sheraton{
+    background: url(../images/sheraton.svg) no-repeat center center;
+    height: 59px;
+    width: 91px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#rental-suites{
+    background: url(../images/rental-suites.jpg) no-repeat center center;
+    height: 90px;
+    width: 100px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suites{
+    background: url(../images/neo-suites.jpg) no-repeat center center;
+    height: 68px;
+    width: 115px;
+}
+
 /* Countdown */
 body section#countdown {
     background: #93B99B;

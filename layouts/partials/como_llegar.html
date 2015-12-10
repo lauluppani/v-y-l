@@ -2,38 +2,40 @@
 <section id="como_llegar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-md-5 text-center direcciones">
                 <h1 class="section-heading">{{ with .Site.Params.como_llegar.title }}{{ . }}{{ end }}</h1>
-                <i class="fa fa-pin"></i>
-                <p>
-                    Club House
-                    <br>
-                    Campo Grande Club de Campo
-                    <br>
+                <i class="fa fa-map-marker"></i>
+                <p class="direccion">
+                    <strong>
+                        Club House
+                        <br>
+                        Campo Grande 
+                        <span>Club de Campo</span>
+                    </strong>
                     <span>Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina</span>
                 </p>
-                <p>
-                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje subir a la derecha en el km. 45, tomar el camino asfaltado.
+                <p class="instruccion">
+                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje, subir a la derecha en el km. 45 y tomar el camino asfaltado.
                 </p>
                 <h1 class="section-heading">{{ with .Site.Params.como_llegar.subtitle }}{{ . }}{{ end }}</h1>
-                <ul>
+                <ul class="hoteles">
                     <li>
-                        <a href="">Ibis</a>
+                        <a href="http://www.ibis.com/es/hotel-8646-ibis-pilar/index.shtml" target="_blank" id="ibis">Ibis</a>
                     </li>
                     <li>
-                        <a href="">Camberland Hotel</a>
+                        <a href="http://www.hotelcamberland.com/" target="_blank" id="camberland">Camberland Hotel</a>
                     </li>
                     <li>
-                        <a href="">Howard Johnson</a>
+                        <a href="http://www.hjpilar.com.ar/" target="_blank" id="howard-johnson">Howard Johnson</a>
                     </li>
                     <li>
-                        <a href="">Sheraton - Hotels & Resorts</a>
+                        <a href="http://www.sheraton-pilar.com/" target="_blank" id="sheraton">Sheraton - Hotels & Resorts</a>
                     </li>
                     <li>
-                        <a href="">Rental Suites - Pilar</a>
+                        <a href="http://www.rentalsuitespilar.com.ar/" target="_blank" id="rental-suites">Rental Suites - Pilar</a>
                     </li>
                     <li>
-                        <a href="">Neo Suites - Concord Pilar</a>
+                        <a href="http://www.neosuites.com/" target="_blank" id="neo-suites">Neo Suites - Concord Pilar</a>
                     </li>
                 </ul>
             </div>
