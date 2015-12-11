@@ -18,6 +18,7 @@
 <link href="http://vitiylucas.com/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://vitiylucas.com/css/flipclock.css">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -75,10 +76,10 @@
 	        <h3>30 • 01 • 2016</h3>
         </hgroup>
         <div class="actions">
-	        <button type="submit" class="btn btn-xl action-btn">Agendar</button>
-	        <button type="submit" class="btn btn-xl action-btn">RSVP</button>
+	        
+	        <a href="#rsvp" class="btn btn-xl action-btn page-scroll">RSVP</a>
         </div>
-        <a href="#" class="arrow-down"></a>
+        <a href="#quote" class="page-scroll arrow-down"></a>
     </div>
 </section>
 <!-- Quote Section -->
@@ -113,8 +114,8 @@
                     </div>
                     <div class="text-block">
                         <span>Empezando</span>
-                        <p>a las 6:30hs</p>
-                        <span>de la tarde</span>
+                        <p>a las 18:30hs</p>
+                        <span>puntual</span>
                     </div>
                 </div>
                 <div class="block">
@@ -132,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <a href="#" class="arrow-down"></a>
+        <a href="#rsvp" class="page-scroll arrow-down"></a>
     </div>
 </section>
 
@@ -167,13 +168,12 @@
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Cuál es tu canción favorita? *" name="song" required data-validation-required-message="Please enter your phone number.">
-                        <p class="help-block text-danger"></p>
+                        <input type="text" class="form-control" placeholder="Cuál es tu canción favorita?" name="song">
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div id="success"></div>
-                    <button type="submit" class="btn btn-xl">RSVP</button>
+                    <button type="submit" class="btn btn-xl action-btn large">RSVP</button>
                     <p>
                         <small>
                             Por favor, confirmá para el
@@ -192,13 +192,13 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="section-heading">Regalos</h1>
-                <img src="" class="rose">
+                <img class="rose" src="../images/rose.svg">
                 <p>
                     Tres cosas no pueden faltar en nuestras vidas:
                     <strong>Salud, dinero y amor...</strong>
                     Por suerte estamos sanos y muy enamorados, así que podés ayudarnos con lo que nos falta!
                 </p>
-                <a href="">Quiero ayudar</a>
+                <a href="" class="action-btn large">Quiero ayudar</a>
             </div>
         </div>
     </div>
@@ -208,38 +208,40 @@
 <section id="como_llegar">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-md-5 text-center direcciones">
                 <h1 class="section-heading">Cómo llegar</h1>
-                <i class="fa fa-pin"></i>
-                <p>
-                    Club House
-                    <br>
-                    Campo Grande Club de Campo
-                    <br>
+                <i class="fa fa-map-marker"></i>
+                <p class="direccion">
+                    <strong>
+                        Club House
+                        <br>
+                        Campo Grande 
+                        <span>Club de Campo</span>
+                    </strong>
                     <span>Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina</span>
                 </p>
-                <p>
-                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje subir a la derecha en el km. 45, tomar el camino asfaltado.
+                <p class="instruccion">
+                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje, subir a la derecha en el km. 45 y tomar el camino asfaltado.
                 </p>
                 <h1 class="section-heading">Dónde quedarse</h1>
-                <ul>
+                <ul class="hoteles">
                     <li>
-                        <a href="">Ibis</a>
+                        <a href="http://www.ibis.com/es/hotel-8646-ibis-pilar/index.shtml" target="_blank" id="ibis">Ibis</a>
                     </li>
                     <li>
-                        <a href="">Camberland Hotel</a>
+                        <a href="http://www.hotelcamberland.com/" target="_blank" id="camberland">Camberland Hotel</a>
                     </li>
                     <li>
-                        <a href="">Howard Johnson</a>
+                        <a href="http://www.hjpilar.com.ar/" target="_blank" id="howard-johnson">Howard Johnson</a>
                     </li>
                     <li>
-                        <a href="">Sheraton - Hotels & Resorts</a>
+                        <a href="http://www.sheraton-pilar.com/" target="_blank" id="sheraton">Sheraton - Hotels & Resorts</a>
                     </li>
                     <li>
-                        <a href="">Rental Suites - Pilar</a>
+                        <a href="http://www.rentalsuitespilar.com.ar/" target="_blank" id="rental-suites">Rental Suites - Pilar</a>
                     </li>
                     <li>
-                        <a href="">Neo Suites - Concord Pilar</a>
+                        <a href="http://www.neosuites.com/" target="_blank" id="neo-suites">Neo Suites - Concord Pilar</a>
                     </li>
                 </ul>
             </div>
@@ -253,6 +255,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="section-heading">Countdown</h1>
+                <div class="your-clock"></div>
             </div>
         </div>
     </div>
@@ -277,17 +280,20 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <hgroup>
-                    <h1 class="section-heading">Spread the love</h1>
-                    <h2> Usá #vitiylucas en Instagram para ayudarnos a compartir nuestro día especial.</h2>
+                    <h1 class="section-heading">Spread the love...</h1>
+                    <h2> 
+                        Usá 
+                        <a href="">#vitiylucas</a>
+                        en Instagram para ayudarnos a compartir nuestro día especial.</h2>
                     <h3>V&L</h3>
                 </hgroup>
             </div>
         </div>
-        <div class="row">
+        <div class="row copyright">
             <div class="col-lg-12 text-center">
                 <a href="">nosotros@vitiylucas.com</a>
                 <p>
-                    <small>©2015 Viti y Lucas. Todos los derechos reservados.</small>
+                    <small>©<script type="text/javascript">document.write(new Date().getFullYear());</script> Viti y Lucas. Todos los derechos reservados.</small>
                 </p>
             </div>
         </div>
@@ -308,6 +314,10 @@
 <script src="http://vitiylucas.com/js/contact_me.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="http://vitiylucas.com/js/agency.js"></script>
+<!-- Custom JavaScript -->
+<script src="http://vitiylucas.com/js/apps.js"></script>
+<!-- Flipclock -->
+<script src="http://vitiylucas.com/js/flipclock.min.js"></script>
 
 
     </body>

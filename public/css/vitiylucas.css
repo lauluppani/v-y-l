@@ -23,13 +23,13 @@
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
 
 /* Nav */
 body header nav.navbar-default {
-	background-color: rgba(255, 237, 222, 0.9);
+    background-color: rgba(255, 237, 222, 0.9);
     border: 0 none;
 }
 body header nav.navbar-default .navbar-nav > li {
@@ -73,7 +73,7 @@ body header nav.navbar-default > .container {
 }
 /* Nav LEFT*/
 body nav .nav-left {
-	float: left;
+    float: left;
     width: 40%;
 }
 @media only screen and (max-width: 850px) {
@@ -87,7 +87,7 @@ body nav .nav-left > li{
 
 /* Logo */
 body nav .container > .navbar-header {
-	font-family: 'abraham_lincolnregular';
+    font-family: 'abraham_lincolnregular';
     width: 20%;
 }
 @media only screen and (max-width: 850px) {
@@ -133,8 +133,8 @@ body nav .container > .navbar-header a.logo:before {
     width: 80px;
 }
 body nav .container > .navbar-header a.logo:hover span {
-	color: #CB9540;
-	text-decoration: none;
+    color: #CB9540;
+    text-decoration: none;
 }
 body nav .container > .navbar-header a.logo:hover:before {
     margin-top: -20px;
@@ -142,7 +142,7 @@ body nav .container > .navbar-header a.logo:hover:before {
 
 /* Nav RIGHT */
 body nav .nav-right {
-	float: right;
+    float: right;
     width: 40%;
 }
 @media only screen and (max-width: 850px) {
@@ -153,6 +153,11 @@ body nav .nav-right {
 
 /* Buttons */
 body .action-btn {
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -160,6 +165,7 @@ body .action-btn {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: #7B997F;
+    border-radius: 0;
     box-shadow: 6px 6px 0 rgba(236, 233, 220, 0.2);
     color: #ECE9DC;
     font-family: 'Montserrat', sans-serif;
@@ -174,14 +180,24 @@ body .action-btn:hover {
     color: #ECE9DC;
     text-decoration: none;
 }
-
- /* Sections */
-body section {
-    min-height: 800px;
-	/*height: 100vh;*/
+body .action-btn:active, body .action-btn:focus {
+    -webkit-appearance: none;
+    color: #ECE9DC;
+    outline: none;
+    text-decoration: none;
+}
+body .action-btn.large{
+    font-size: 22px;
+    min-width: 280px;
+    padding: 20px 40px;
 }
 
-body section h1.section-heading {
+ /* Sections */
+/*body section {
+    min-height: 800px;
+}*/
+
+body h1.section-heading {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: 'abraham_lincolnregular';
@@ -191,11 +207,9 @@ body section h1.section-heading {
 
 /* Hero */
 body section#hero {
-    /*height: 100vh;*/
-    /*min-height: 0;*/
-    /*overflow: hidden;*/
     background: #93B99B;
     color: #EBE2C4;
+    min-height: 800px;
     padding: 150px 20px 0 20px;
     position: relative;
 }
@@ -228,11 +242,10 @@ body section#hero hgroup h3 {
 body section#hero .actions {
     margin-top: 40px;
 }
-body section#hero .actions button {
-    border-radius: 0;
+body section#hero .actions a {
     margin-right: 12px;
 }
-body section#hero .actions button:last-child {
+body section#hero .actions a:last-child {
     margin-right: 0;
 }
 body a.arrow-down {
@@ -287,7 +300,6 @@ body section#ceremonia {
     background: #D9BF9D;
     padding-top: 100px;
     position: relative;
-    min-height: 0;
 }
 body section#ceremonia h1.section-heading {
     color: #A5795B;
@@ -396,13 +408,13 @@ body section#ceremonia .action-btn:after {
 /* RSVP */
 body section#rsvp {
     background: #EBE2C4;
-    min-height: 0;
+    color: #BF967A;
     padding: 100px 0;
 }
 body section#rsvp > .container{
     background: #ECE9DC;
     float: none;
-    padding: 50px 80px;
+    padding: 30px 80px;
     position: relative;
 }
 @media only screen and (max-width: 768px) {
@@ -436,25 +448,268 @@ body section#rsvp h2.section-subheading {
     font-size: 36px;
 }
 body section#rsvp .radio-1, body section#rsvp .radio-2 {
+    font-size: 16px;
+    text-align: left;
+    margin: 15px 0 15px 0;
+}
+body section#rsvp .form-group input{
+    margin-bottom: 10px;
+}
+body section#rsvp .form-group input{
+    -moz-transition: border 0.3s ease;
+    -o-transition: border 0.3s ease;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;    
+    border-radius: 0;
+    border: 2px solid rgba(147, 185, 155, 0.4);
+    box-shadow: 0 0 0 transparent;
+    font-size: 14px;
+    padding: 25px 10px;
+}
+body section#rsvp .form-group input:focus{
+    border: 2px solid rgba(147, 185, 155, 0.8);
+}
+body section#rsvp .form-group p.help-block.text-danger{
+    font-size: 12px;
     text-align: left;
 }
+body section#rsvp .form-group p.help-block.text-danger ul{
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+body section#rsvp .form-group p.help-block.text-danger ul li{
+    color: #F06E5C;
+    list-style: none;
+}
+body section#rsvp .action-btn{
+    background-color: #93B99B;
+    box-shadow: 6px 6px 0 rgba(191, 150, 122, 0.2);
+    margin: 10px 0 20px 0;
+}
+body section#rsvp .action-btn:hover{
+    background-color: #BF967A;
+    box-shadow: 0 0 0 transparent;
+}
+body section#rsvp p small{
+    color: #93B99B;
+    font-size: 12px;
+}
+
+
 /* Regalos */
 body section#regalos {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     background: #E18C78;
+    color: #ECE9DC;
+    font-size: 20px;
+    padding: 100px 0;
 }
+body section#regalos img.rose {
+    margin: 20px 0 35px 0;
+}
+body section#regalos strong{
+    display: block;
+    font-family: 'brusherregular';
+    font-size: 34px;
+    padding: 10px 0;
+}
+body section#regalos .action-btn{
+    background-color: #93B99B;
+    margin-top: 20px;
+}
+body section#regalos .action-btn:hover{
+    background-color: #7B997F;
+}
+
+
 /* Cómo llegar */
 body section#como_llegar {
     background: #F8B264;
+    color: #BF967A;
+    padding: 50px 0;
 }
+body section#como_llegar .container .row > .direcciones  {
+    background: #ECE9DC;
+    padding: 25px 40px;
+}
+body section#como_llegar .container .row > .direcciones h1.section-heading {
+    color: #7B997F;
+}
+body section#como_llegar .container .row > .direcciones i{
+    color: #E18C78;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion{
+    font-size: 20px;
+    line-height: 22px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong > span{
+    font-weight: 400;
+}
+body section#como_llegar .container .row > .direcciones p.direccion strong + span{
+    font-size: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #BF967A;
+}
+body section#como_llegar .container .row > .direcciones p.instruccion{
+    padding-top: 20px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles{
+    font-size: 0;
+    padding: 0;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li{
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    list-style: none;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    display: block;
+    font-size: 11px;
+    text-indent: -10000px;
+    margin: 0 10px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a:hover{
+    opacity: 0.5;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#ibis{
+    background: url(../images/ibis.svg) no-repeat center center;
+    height: 52px;
+    width: 52px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#camberland{
+    background: url(../images/camberland.jpg) no-repeat center center;
+    height: 34px;
+    width: 210px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#howard-johnson{
+    background: url(../images/howard-johnson.svg) no-repeat center center;
+    height: 44px;
+    width: 138px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#sheraton{
+    background: url(../images/sheraton.svg) no-repeat center center;
+    height: 59px;
+    width: 91px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#rental-suites{
+    background: url(../images/rental-suites.jpg) no-repeat center center;
+    height: 90px;
+    width: 100px;
+}
+body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suites{
+    background: url(../images/neo-suites.jpg) no-repeat center center;
+    height: 68px;
+    width: 115px;
+}
+
 /* Countdown */
 body section#countdown {
     background: #93B99B;
+    padding: 50px 0;
 }
+body section#countdown h1.section-heading{
+    color: #ECE9DC;
+}
+
+
 /* Galería */
 body section#galeria {
     background: #A5795B;
+    padding: 50px 0;
 }
+body section#galeria h1.section-heading{
+    color: #ECE9DC;
+}
+
+
 /* Vitiylucas */
-body section#vitiylucas {
+body footer#vitiylucas {
     background: #EBE2C4;
+    padding: 35px 0;
 }
+body footer#vitiylucas h1.section-heading{
+    color: #93B99B;
+    font-family: 'brusherregular';
+    text-transform: none;
+}
+body footer#vitiylucas h2{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #A5795B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 30px 0;
+    text-transform: uppercase;
+}
+body footer#vitiylucas h2 a{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    color: #93B99B;
+}
+body footer#vitiylucas h2 a:hover{
+    opacity: 0.7;
+    text-decoration: none;
+}
+body footer#vitiylucas h3{
+    color: #93B99B;
+    font-family: 'abraham_lincolnregular';
+    font-size: 30px;
+    margin: 0 auto;
+    max-width: 150px;
+    position: relative;
+}
+body footer#vitiylucas h3:before, body footer#vitiylucas h3:after{
+    content: "";
+    height: 22px;
+    position: absolute;
+    top: 3px;
+    width: 34px;
+}
+body footer#vitiylucas h3:before{
+    background: url(../images/leaf-left.svg) no-repeat center center;
+    left: 0;
+}
+body footer#vitiylucas h3:after{
+    background: url(../images/leaf-right.svg) no-repeat center center;
+    right: 0;
+}
+body footer#vitiylucas .copyright {
+    margin-top: 30px;
+}
+body footer#vitiylucas .copyright a {
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    color: #93B99B;
+}
+body footer#vitiylucas .copyright a:hover {
+    color: #7B997F;
+    text-decoration: none;
+}
+body footer#vitiylucas .copyright p small{
+    color: #A5795B;
+}
+
+
