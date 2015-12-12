@@ -536,10 +536,13 @@ body section#regalos .action-btn.pressed{
     cursor: default;
 }
 body section#regalos .datos{
+    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+    display: none;
     font-size: 16px;
     line-height: 20px;
-    margin-top: 30px;
-    display: none;
+    margin: 30px auto 0 auto;
+    max-width: 500px;
+    padding-top: 30px;
 }
 body section#regalos .datos h2{
     font-size: 16px;
