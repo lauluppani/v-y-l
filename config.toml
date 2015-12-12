@@ -60,7 +60,7 @@ googleAnalytics = ""
 
     # RSVP section
 	[params.rsvp]
-		title = "RSVP"
+		title = "R.S.V.P."
 		subtitle  = "Vas a venir?"
 		buttonText = "RSVP"
 

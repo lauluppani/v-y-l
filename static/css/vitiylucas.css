@@ -425,6 +425,11 @@ body section#rsvp > .container{
         padding: 50px 20px;
     }
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    body section#rsvp .col-sm-offset-2{
+        margin-left: auto;
+    }
+}
 body section#rsvp > .container:before, body section#rsvp > .container:after {
     background: url(../images/envelope-lines.svg) no-repeat -20px top;
     content: "";
@@ -556,6 +561,7 @@ body section#como_llegar .container .row > .direcciones p.direccion strong > spa
     font-weight: 400;
 }
 body section#como_llegar .container .row > .direcciones p.direccion strong + span{
+    display: block;
     font-size: 14px;
     padding-bottom: 20px;
     border-bottom: 1px dotted #BF967A;
@@ -660,7 +666,7 @@ body footer#vitiylucas h2{
     padding: 30px 0;
     text-transform: uppercase;
 }
-body footer#vitiylucas h2 a{
+body footer#vitiylucas h2 a, body footer#vitiylucas h2 span{
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
