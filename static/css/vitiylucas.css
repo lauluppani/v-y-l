@@ -193,7 +193,7 @@ body .action-btn.large{
 }
 
 /* Sections */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     body section > .container {
         width: auto;
     }
