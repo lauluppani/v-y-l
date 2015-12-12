@@ -17,4 +17,13 @@ $(document).ready(function() {
     clock.setCountdown(true);
     clock.start();
 
+
+    $('.datos').hide();
+
+    $( "#quiero-ayudar" ).click(function() {
+        $(this).prev('.datos').fadeIn(1000);
+        $(this).addClass('pressed');
+        $(this).text('Muchas gracias!').append('<i class="fa fa-thumbs-o-up"></i>');
+        return false;
+    });
 });
