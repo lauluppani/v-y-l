@@ -5,7 +5,7 @@
             <div class="col-lg-12 text-center">
                 <h1 class="section-heading">{{ with .Site.Params.ceremonia.title }}{{ . }}{{ end }}</h1>
                 <h2 class="section-subheading text-muted">{{ with .Site.Params.ceremonia.subtitle }}{{ . | markdownify }}{{ end }}</h2>
-                <div class="block">
+                <div class="block fecha-y-horario">
                     <div class="text-block">
                         <span>Sábado</span>
                         <p>30 de Enero</p>
@@ -17,18 +17,19 @@
                         <span>puntual</span>
                     </div>
                 </div>
-                <div class="block">
+                <div class="block lugar">
                     <p>
                         <strong>
                             Club House - Campo Grande
                             <span>Club de Campo</span>
                         </strong>
-                        <br>
+                    </p>
+                    <p>
                         Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina
                     </p>
                 </div>
                 <div class="block">
-                    <a href="#" class="action-btn">Ver Mapa</a>
+                    <a href="#map" class="page-scroll action-btn">Ver Mapa</a>
                 </div>
             </div>
         </div>

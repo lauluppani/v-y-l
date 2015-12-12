@@ -192,7 +192,12 @@ body .action-btn.large{
     padding: 20px 40px;
 }
 
- /* Sections */
+/* Sections */
+@media only screen and (min-width: 768px) {
+    body section > .container {
+        width: auto;
+    }
+}
 /*body section {
     min-height: 800px;
 }*/
@@ -203,6 +208,11 @@ body h1.section-heading {
     font-family: 'abraham_lincolnregular';
     font-size: 60px;
     text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+    body h1.section-heading {
+        font-size: 50px;
+    }
 }
 
 /* Hero */
@@ -294,6 +304,11 @@ body section#quote p {
     color: #A5795B;
     font-size: 18px;
 }
+@media only screen and (max-width: 600px) {
+    body section#quote h2 {
+        font-size: 20px;
+    }
+}
 
 /* Ceremonia */
 body section#ceremonia {
@@ -311,12 +326,12 @@ body section#ceremonia .block {
     margin: 0 auto;
     max-width: 700px;
 }
-body section#ceremonia .block:first-of-type {
+body section#ceremonia .block.fecha-y-horario {
     border-bottom: 1px solid rgba(165, 121, 91, 0.3);
     border-top: 1px solid rgba(165, 121, 91, 0.3);
     padding: 20px 0;
 }
-body section#ceremonia .block:nth-of-type(2) {
+body section#ceremonia .block.lugar {
     margin-top: 20px;
 }
 body section#ceremonia .block .text-block {
@@ -360,6 +375,23 @@ body section#ceremonia .block strong {
 }
 body section#ceremonia .block strong span {
     font-weight: 400;
+}
+@media only screen and (max-width: 600px) {
+    body section#ceremonia .block.fecha-y-horario .text-block:first-of-type {
+        padding-right: 20px;
+    }
+    body section#ceremonia .block.fecha-y-horario .text-block:last-of-type {
+        padding-left: 20px;
+    }
+    body section#ceremonia .block .text-block p {
+        font-size: 30px;
+    }
+    body section#ceremonia .block .text-block span  {
+        font-size: 16px;
+    }
+    body section#ceremonia .lugar p:first-child {
+        line-height: 22px;
+    }
 }
 body section#ceremonia .action-btn {
     display: inline-block;
@@ -457,10 +489,10 @@ body section#rsvp .radio-1, body section#rsvp .radio-2 {
     text-align: left;
     margin: 15px 0 15px 0;
 }
-body section#rsvp .form-group input{
+body section#rsvp .form-group input[type='text']{
     margin-bottom: 10px;
 }
-body section#rsvp .form-group input{
+body section#rsvp .form-group input[type='text']{
     -moz-transition: border 0.3s ease;
     -o-transition: border 0.3s ease;
     -webkit-transition: border 0.3s ease;
@@ -471,7 +503,7 @@ body section#rsvp .form-group input{
     font-size: 14px;
     padding: 25px 10px;
 }
-body section#rsvp .form-group input:focus{
+body section#rsvp .form-group input[type='text']:focus{
     border: 2px solid rgba(147, 185, 155, 0.8);
 }
 body section#rsvp .form-group p.help-block.text-danger{
@@ -485,6 +517,11 @@ body section#rsvp .form-group p.help-block.text-danger ul{
 body section#rsvp .form-group p.help-block.text-danger ul li{
     color: #F06E5C;
     list-style: none;
+}
+@media only screen and (max-width: 600px) {
+    body section#rsvp .form-group.col-md-6, body section#rsvp .form-group.col-md-12{
+        padding: 0px;
+    }
 }
 body section#rsvp .action-btn{
     background-color: #93B99B;
@@ -519,21 +556,32 @@ body section#regalos .col-lg-12 > p strong{
     font-size: 34px;
     padding: 10px 0;
 }
-body section#regalos .action-btn{
+@media only screen and (max-width: 600px) {
+    body section#regalos .col-lg-12 > p strong {
+        line-height: 30px;
+        padding: 20px 0;
+    }
+}
+body section#regalos #quiero-ayudar{
     background-color: #93B99B;
     border: 4px solid transparent;
     margin-top: 30px;
 }
-body section#regalos .action-btn i{
+body section#regalos #quiero-ayudar i{
     margin-left: 15px;
 }
-body section#regalos .action-btn:hover, body section#regalos .action-btn.pressed{
+body section#regalos #quiero-ayudar:hover, body section#regalos #quiero-ayudar.pressed{
     background-color: #7B997F;
 }
-body section#regalos .action-btn.pressed{
+body section#regalos #quiero-ayudar.pressed{
     box-shadow: 0 0 0 transparent;
     border: 4px solid #67896A;
     cursor: default;
+}
+@media only screen and (max-width: 600px) {
+    body section#regalos #quiero-ayudar {
+        padding: 15px 10px;
+    }
 }
 body section#regalos .datos{
     border-top: 1px dotted rgba(255, 255, 255, 0.5);
@@ -552,6 +600,12 @@ body section#regalos .datos h2{
 body section#regalos .datos p{
     margin: 0;
 }
+@media only screen and (max-width: 600px) {
+    body section#regalos .datos {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
 
 /* Cómo llegar */
 body section#como_llegar {
@@ -568,7 +622,7 @@ body section#como_llegar #map  {
 }
 @media only screen and (max-width: 992px) {
     body section#como_llegar #map {
-        height: 500px;
+        height: 300px;
         position: relative;
     }
 }
@@ -633,7 +687,7 @@ body section#como_llegar .container .row > .direcciones ul.hoteles li a{
     display: block;
     font-size: 11px;
     text-indent: -10000px;
-    margin: 0 10px;
+    margin: 10px;
 }
 body section#como_llegar .container .row > .direcciones ul.hoteles li a:hover{
     opacity: 0.5;
@@ -689,7 +743,11 @@ body section#countdown h1.section-heading{
     color: #ECE9DC;
     margin-top: 0;
 }
-
+@media only screen and (max-width: 600px) {
+    body section#countdown .flip-clock-divider .flip-clock-label {
+        font-size: 10px;
+    }
+}
 
 /* Vitiylucas */
 body footer#vitiylucas {

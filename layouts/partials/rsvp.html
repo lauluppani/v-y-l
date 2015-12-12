@@ -10,11 +10,13 @@
         <div class="row">
             <form  action="//formspree.io/{{ with .Site.Params.email }}{{.}}{{ end }}" method="POST" name="sentMessage" id="rsvpForm" novalidate>
                 <div class="col-md-12">
+                    <input type="hidden" name="_subject" value="Viti y Lucas - RSVP" />
+                    <input type="text" name="_gotcha" style="display:none" />
                     <div class="form-group col-md-6 radio-1">
-                        <label class="radio-inline"><input type="radio" required name="optradio">Cuenten conmigo!</label>
+                        <label class="radio-inline"><input type="radio" required value="Cuenten conmigo!" name="optradio">Cuenten conmigo!</label>
                     </div>
                     <div class="form-group col-md-6 radio-2">
-                        <label class="radio-inline"><input type="radio" required name="optradio">No puedo ir</label>
+                        <label class="radio-inline"><input type="radio" required value="No puedo ir." name="optradio">No puedo ir</label>
                     </div>
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="{{ with .Site.Params.rsvp.form.name.text }}{{ . }}{{ end }}" name="name" required data-validation-required-message="{{ with .Site.Params.rsvp.form.name.warning }}{{ . }}{{ end }}">
@@ -43,6 +45,10 @@
                     </p>    
                 </div>
             </form>
+            <script>
+                var contactform =  document.getElementById('rsvpForm');
+                contactform.setAttribute('action', '//formspree.io/' + 'lauluppani' + '@' + 'gmail' + '.' + 'com');
+            </script>
         </div>
     </div>
 </section>
