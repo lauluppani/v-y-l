@@ -555,13 +555,32 @@ body section#regalos .datos p{
 
 /* Cómo llegar */
 body section#como_llegar {
-    background: #F8B264;
+    background: #FAF6EB;
     color: #BF967A;
-    padding: 50px 0;
+    position: relative;
+}
+body section#como_llegar #map  {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+@media only screen and (max-width: 992px) {
+    body section#como_llegar #map {
+        height: 500px;
+        position: relative;
+    }
 }
 body section#como_llegar .container .row > .direcciones  {
-    background: #ECE9DC;
+    background: rgba(236, 233, 220, 0.9);
     padding: 25px 40px;
+    z-index: 1;
+}
+@media only screen and (max-width: 992px) {
+    body section#como_llegar > .container {
+        width: 100%;
+    }
 }
 body section#como_llegar .container .row > .direcciones h1.section-heading {
     color: #7B997F;
@@ -650,15 +669,6 @@ body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suit
     width: 115px;
 }
 
-/* Countdown */
-body section#countdown {
-    background: #93B99B;
-    padding: 50px 0;
-}
-body section#countdown h1.section-heading{
-    color: #ECE9DC;
-}
-
 
 /* Galería */
 body section#galeria {
@@ -667,6 +677,17 @@ body section#galeria {
 }
 body section#galeria h1.section-heading{
     color: #ECE9DC;
+}
+
+
+/* Countdown */
+body section#countdown {
+    background: #93B99B;
+    padding: 50px 0;
+}
+body section#countdown h1.section-heading{
+    color: #ECE9DC;
+    margin-top: 0;
 }
 
 

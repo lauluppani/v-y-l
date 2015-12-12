@@ -142,7 +142,7 @@
     <div class="container col-md-8 col-sm-offset-2">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1 class="section-heading">RSVP</h1>
+                <h1 class="section-heading">R.S.V.P.</h1>
                 <h2 class="section-subheading">Vas a venir?</h2>
             </div>
         </div>
@@ -150,10 +150,10 @@
             <form  action="//formspree.io/lauluppani@gmail.com" method="POST" name="sentMessage" id="rsvpForm" novalidate>
                 <div class="col-md-12">
                     <div class="form-group col-md-6 radio-1">
-                        <label class="radio-inline"><input type="radio" name="optradio">Cuenten conmigo!</label>
+                        <label class="radio-inline"><input type="radio" required name="optradio">Cuenten conmigo!</label>
                     </div>
                     <div class="form-group col-md-6 radio-2">
-                        <label class="radio-inline"><input type="radio" name="optradio">No puedo ir</label>
+                        <label class="radio-inline"><input type="radio" required name="optradio">No puedo ir</label>
                     </div>
                     <div class="form-group col-md-6">
                         <input type="text" class="form-control" placeholder="Nombre *" name="name" required data-validation-required-message="Por favor, ingresá tu nombre.">
@@ -198,7 +198,23 @@
                     <strong>Salud, dinero y amor...</strong>
                     Por suerte estamos sanos y muy enamorados, así que podés ayudarnos con lo que nos falta!
                 </p>
-                <a href="" class="action-btn large">Quiero ayudar</a>
+                <div class="datos">
+                    <h2>Banco Santander Rio</h2>
+                    <p>
+                        María Victoria Perusini - 
+                        <strong>DNI</strong>
+                        30786240
+                    </p>
+                    <p>
+                        <strong>Número de Cuenta:</strong>
+                        Cuenta Unica 091-422630/7
+                    </p>
+                    <p>
+                        <strong>Número de CBU:</strong>
+                        0720091588000042263072
+                    </p>
+                </div>
+                <a href="" id="quiero-ayudar" class="action-btn large">Quiero ayudar</a>
             </div>
         </div>
     </div>
@@ -249,19 +265,6 @@
     </div>
 </section>
 
-        <!-- Countdown -->
-<section id="countdown">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1 class="section-heading">Countdown</h1>
-                <div class="your-clock"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Galería Section -->
-
         <!-- Galería Section -->
 <section id="galeria">
     <div class="container">
@@ -274,6 +277,19 @@
     </div>
 </section>
 
+        <!-- Countdown -->
+<section id="countdown">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h1 class="section-heading">Countdown</h1>
+                <div class="your-clock"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Galería Section -->
+
         <!-- Footer section -->
 <footer id="vitiylucas">
     <div class="container">
@@ -283,15 +299,16 @@
                     <h1 class="section-heading">Spread the love...</h1>
                     <h2> 
                         Usá 
-                        <a href="">#vitiylucas</a>
-                        en Instagram para ayudarnos a compartir nuestro día especial.</h2>
+                        
+                        <span>#vitiylucas</span>
+                        en las redes sociales para ayudarnos a compartir nuestro día especial.</h2>
                     <h3>V&L</h3>
                 </hgroup>
             </div>
         </div>
         <div class="row copyright">
             <div class="col-lg-12 text-center">
-                <a href="">nosotros@vitiylucas.com</a>
+                <a href="mailto:lauluppani@gmail.com">nosotros@vitiylucas.com</a>
                 <p>
                     <small>©<script type="text/javascript">document.write(new Date().getFullYear());</script> Viti y Lucas. Todos los derechos reservados.</small>
                 </p>

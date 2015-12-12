@@ -425,6 +425,11 @@ body section#rsvp > .container{
         padding: 50px 20px;
     }
 }
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    body section#rsvp .col-sm-offset-2{
+        margin-left: auto;
+    }
+}
 body section#rsvp > .container:before, body section#rsvp > .container:after {
     background: url(../images/envelope-lines.svg) no-repeat -20px top;
     content: "";
@@ -508,7 +513,7 @@ body section#regalos {
 body section#regalos img.rose {
     margin: 20px 0 35px 0;
 }
-body section#regalos strong{
+body section#regalos .col-lg-12 > p strong{
     display: block;
     font-family: 'brusherregular';
     font-size: 34px;
@@ -516,12 +521,37 @@ body section#regalos strong{
 }
 body section#regalos .action-btn{
     background-color: #93B99B;
-    margin-top: 20px;
+    border: 4px solid transparent;
+    margin-top: 30px;
 }
-body section#regalos .action-btn:hover{
+body section#regalos .action-btn i{
+    margin-left: 15px;
+}
+body section#regalos .action-btn:hover, body section#regalos .action-btn.pressed{
     background-color: #7B997F;
 }
-
+body section#regalos .action-btn.pressed{
+    box-shadow: 0 0 0 transparent;
+    border: 4px solid #67896A;
+    cursor: default;
+}
+body section#regalos .datos{
+    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+    display: none;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 30px auto 0 auto;
+    max-width: 500px;
+    padding-top: 30px;
+}
+body section#regalos .datos h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+body section#regalos .datos p{
+    margin: 0;
+}
 
 /* Cómo llegar */
 body section#como_llegar {
@@ -556,6 +586,7 @@ body section#como_llegar .container .row > .direcciones p.direccion strong > spa
     font-weight: 400;
 }
 body section#como_llegar .container .row > .direcciones p.direccion strong + span{
+    display: block;
     font-size: 14px;
     padding-bottom: 20px;
     border-bottom: 1px dotted #BF967A;
@@ -619,15 +650,6 @@ body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suit
     width: 115px;
 }
 
-/* Countdown */
-body section#countdown {
-    background: #93B99B;
-    padding: 50px 0;
-}
-body section#countdown h1.section-heading{
-    color: #ECE9DC;
-}
-
 
 /* Galería */
 body section#galeria {
@@ -636,6 +658,17 @@ body section#galeria {
 }
 body section#galeria h1.section-heading{
     color: #ECE9DC;
+}
+
+
+/* Countdown */
+body section#countdown {
+    background: #93B99B;
+    padding: 50px 0;
+}
+body section#countdown h1.section-heading{
+    color: #ECE9DC;
+    margin-top: 0;
 }
 
 
@@ -660,7 +693,7 @@ body footer#vitiylucas h2{
     padding: 30px 0;
     text-transform: uppercase;
 }
-body footer#vitiylucas h2 a{
+body footer#vitiylucas h2 a, body footer#vitiylucas h2 span{
     -moz-transition: opacity 0.3s ease;
     -o-transition: opacity 0.3s ease;
     -webkit-transition: opacity 0.3s ease;
