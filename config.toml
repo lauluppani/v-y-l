@@ -42,7 +42,7 @@ googleAnalytics = ""
 		brand = "V&L"
 		como_llegar = "Cómo llegar"
 		galeria = "Galería"
-		vitiylucas = "#Vitiylucas"
+		nos_vemos = "Nos vemos"
 
 	# Hero section
 	[params.hero]
@@ -94,7 +94,10 @@ googleAnalytics = ""
 	[params.galeria]
 		title = "Galería"
 
+	# Countdown section
+	[params.countdown]
+		title = "Nos vemos en..."
 
 	# Footer section
 	[params.footer]
-		title = "Share the love..."
+		title = "All you need is love"

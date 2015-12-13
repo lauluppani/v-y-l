@@ -192,7 +192,12 @@ body .action-btn.large{
     padding: 20px 40px;
 }
 
- /* Sections */
+/* Sections */
+@media only screen and (max-width: 768px) {
+    body section > .container {
+        width: auto;
+    }
+}
 /*body section {
     min-height: 800px;
 }*/

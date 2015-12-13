@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 text-center">
-                <h1 class="section-heading">Countdown</h1>
+                <h1 class="section-heading">{{ with .Site.Params.countdown.title }}{{ . }}{{ end }}</h1>
                 <div class="your-clock"></div>
             </div>
         </div>
