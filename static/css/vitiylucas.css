@@ -955,3 +955,30 @@ body footer .copyright p small{
 }
 
 
+
+body .mfp-arrow.mfp-arrow-left:before, body .mfp-arrow.mfp-arrow-right:before{
+    border: 0 none !important;
+}
+body .mfp-arrow.mfp-arrow-left:after, body .mfp-arrow.mfp-arrow-right:after{
+    border: 0 none !important;
+    color: white;
+    font-family:'fontAwesome';
+    font-size: 30px;
+    margin-left: 35px;
+    top: 0;
+}
+body .mfp-arrow.mfp-arrow-left:after{
+    content:"\f104";
+}
+body .mfp-arrow.mfp-arrow-right:after{
+    content:"\f105";
+}
+@media only screen and (max-width: 600px) {
+    body .mfp-arrow.mfp-arrow-left, body .mfp-arrow.mfp-arrow-right{
+        width: 40px;
+    }
+    body .mfp-arrow.mfp-arrow-left:after, body .mfp-arrow.mfp-arrow-right:after{
+        margin-left: 15px;
+    }
+}
+

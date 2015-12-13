@@ -215,6 +215,26 @@ body h1.section-heading {
     }
 }
 
+/* Arrow Down */
+body a.arrow-down {
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    background: url(../images/arrow-down.svg) no-repeat center center;
+    display: block;
+    height: 38px;
+    left: 50%;
+    margin-left: -6px;
+    position: absolute;
+    text-indent: -10000px;
+    width: 12px;
+    bottom: 30px;
+}
+body a.arrow-down:hover {
+    opacity: 0.5;
+}
+
 /* Hero */
 body section#hero {
     background: #93B99B;
@@ -258,23 +278,14 @@ body section#hero .actions a {
 body section#hero .actions a:last-child {
     margin-right: 0;
 }
-body a.arrow-down {
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-    background: url(../images/arrow-down.svg) no-repeat center center;
-    display: block;
-    height: 38px;
-    left: 50%;
-    margin-left: -6px;
-    position: absolute;
-    text-indent: -10000px;
-    width: 12px;
-    bottom: 30px;
-}
-body a.arrow-down:hover {
-    opacity: 0.5;
+@media only screen and (max-width: 600px) {
+    body section#hero {
+        padding-top: 100px;
+        min-height: 0;
+    }
+    body section#hero .actions {
+        margin-bottom: 110px;
+    }
 }
 
 /* Quote */
@@ -290,22 +301,68 @@ body section#quote h1 {
     text-indent: -10000px;
     width: auto;
 }
-body section#quote img.cupid-heart {
+body section#quote p {
+    color: #A5795B;
+    font-size: 18px;
+}
+body section#quote .cartoon-wrapper {
+    font-size: 0;
+    margin-top: 50px;
+    width: 100%;
+}
+body section#quote .cartoon {
+    background: url(../images/cartoon.svg) no-repeat center center;
+    border-radius: 50%;
+    height: 250px;
+    width: 220px;
+}
+body section#quote .left, body section#quote .right, body section#quote .middle {
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+}
+body section#quote .left, body section#quote .right {
+    width: 35%;
+}
+body section#quote .middle{
+    width: 20%;
+    margin: 0 5%;
+}
+body section#quote .middle img.cupid-heart {
+    height: auto;
     margin-top: 20px;
+    width: 100%;
+}
+body section#quote .right .cartoon{
+    float: right;
 }
 body section#quote h2 {
     color: #ECE9DC;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    margin-top: 120px;
+    margin-top: 60px;
     text-transform: uppercase;
 }
-body section#quote p {
-    color: #A5795B;
-    font-size: 18px;
+@media only screen and (max-width: 768px) {
+    body section#quote .left .cartoon, body section#quote .right .cartoon {
+        background-size: 100% auto;
+    }
 }
 @media only screen and (max-width: 600px) {
+    body section#quote .left .cartoon, body section#quote .right .cartoon {
+        width: 100%;
+    }
+    body section#quote h1 {
+        height: 400px;
+        margin-top: 50px;
+    }
+    body section#quote .cartoon-wrapper {
+        margin-top: 0;
+    }
     body section#quote h2 {
+        margin-top: 0;
         font-size: 20px;
     }
 }
@@ -313,7 +370,7 @@ body section#quote p {
 /* Ceremonia */
 body section#ceremonia {
     background: #D9BF9D;
-    padding-top: 100px;
+    padding-top: 60px;
     position: relative;
 }
 body section#ceremonia h1.section-heading {
@@ -377,6 +434,9 @@ body section#ceremonia .block strong span {
     font-weight: 400;
 }
 @media only screen and (max-width: 600px) {
+    body section#ceremonia {
+        padding-top: 30px;
+    }
     body section#ceremonia .block.fecha-y-horario .text-block:first-of-type {
         padding-right: 20px;
     }
@@ -401,7 +461,7 @@ body section#ceremonia .action-btn {
     *vertical-align: auto;
     background-color: #F06E5C;
     font-size: 12px;
-    margin: 12px 0 170px 0;
+    margin: 12px 0 120px 0;
     padding: 12px 25px;
 }
 @media only screen and (max-width: 500px) {
@@ -727,11 +787,104 @@ body section#como_llegar .container .row > .direcciones ul.hoteles li a#neo-suit
 /* Galería */
 body section#galeria {
     background: #A5795B;
-    padding: 50px 0;
 }
 body section#galeria h1.section-heading{
     color: #ECE9DC;
 }
+body section#galeria .galeria-wrapper .fila{
+    font-size: 0;
+}
+body section#galeria .galeria-wrapper .fila a{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    height: 250px;
+    outline: none;
+    overflow: hidden;
+}
+body section#galeria .galeria-wrapper .fila.impar a:nth-of-type(odd){
+    width: 30%;
+}
+body section#galeria .galeria-wrapper .fila.impar a:nth-of-type(even){
+    width: 20%;
+}
+body section#galeria .galeria-wrapper .fila.par a:nth-of-type(odd){
+    width: 20%;
+}
+body section#galeria .galeria-wrapper .fila.par a:nth-of-type(even){
+    width: 30%;
+}
+body section#galeria .galeria-wrapper .fila a:hover{
+    opacity: 0.8;
+}
+body section#galeria .galeria-wrapper .fila a img{
+    display: block;
+    width: auto;
+    height: 100%;
+}
+body section#galeria .galeria-wrapper .fila a#pic-1{
+    background: url(../images/galeria/01.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-2{
+    background: url(../images/galeria/02.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-3{
+    background: url(../images/galeria/03.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-4{
+    background: url(../images/galeria/04.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-5{
+    background: url(../images/galeria/05.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-6{
+    background: url(../images/galeria/06.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-7{
+    background: url(../images/galeria/07.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-8{
+    background: url(../images/galeria/08.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-9{
+    background: url(../images/galeria/09.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-10{
+    background: url(../images/galeria/10.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-11{
+    background: url(../images/galeria/11.jpg) no-repeat center center;
+    background-size: cover;
+}
+body section#galeria .galeria-wrapper .fila a#pic-12{
+    background: url(../images/galeria/12.jpg) no-repeat center center;
+    background-size: cover;
+}
+@media only screen and (max-width: 960px){
+    body section#galeria .galeria-wrapper .fila a.box-1, body section#galeria .galeria-wrapper .fila a.box-4 {
+        width: 60% !important;
+    }
+    body section#galeria .galeria-wrapper .fila a.box-2, body section#galeria .galeria-wrapper .fila a.box-3 {
+        width: 40% !important;
+    }
+}
+
 
 
 /* Countdown */
@@ -750,75 +903,54 @@ body section#countdown h1.section-heading{
 }
 
 /* Vitiylucas */
-body footer#vitiylucas {
+body footer {
     background: #EBE2C4;
     padding: 35px 0;
 }
-body footer#vitiylucas h1.section-heading{
+body footer h1.section-heading{
     color: #93B99B;
     font-family: 'brusherregular';
     text-transform: none;
 }
-body footer#vitiylucas h2{
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    color: #A5795B;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 22px;
-    padding: 30px 0;
-    text-transform: uppercase;
-}
-body footer#vitiylucas h2 a, body footer#vitiylucas h2 span{
-    -moz-transition: opacity 0.3s ease;
-    -o-transition: opacity 0.3s ease;
-    -webkit-transition: opacity 0.3s ease;
-    transition: opacity 0.3s ease;
-    color: #93B99B;
-}
-body footer#vitiylucas h2 a:hover{
-    opacity: 0.7;
-    text-decoration: none;
-}
-body footer#vitiylucas h3{
+
+body footer h2{
     color: #93B99B;
     font-family: 'abraham_lincolnregular';
     font-size: 30px;
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
     max-width: 150px;
     position: relative;
 }
-body footer#vitiylucas h3:before, body footer#vitiylucas h3:after{
+body footer h2:before, body footer h2:after{
     content: "";
     height: 22px;
     position: absolute;
     top: 3px;
     width: 34px;
 }
-body footer#vitiylucas h3:before{
+body footer h2:before{
     background: url(../images/leaf-left.svg) no-repeat center center;
     left: 0;
 }
-body footer#vitiylucas h3:after{
+body footer h2:after{
     background: url(../images/leaf-right.svg) no-repeat center center;
     right: 0;
 }
-body footer#vitiylucas .copyright {
+body footer .copyright {
     margin-top: 30px;
 }
-body footer#vitiylucas .copyright a {
+body footer .copyright a {
     -moz-transition: color 0.3s ease;
     -o-transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
     color: #93B99B;
 }
-body footer#vitiylucas .copyright a:hover {
+body footer .copyright a:hover {
     color: #7B997F;
     text-decoration: none;
 }
-body footer#vitiylucas .copyright p small{
+body footer .copyright p small{
     color: #A5795B;
 }
 

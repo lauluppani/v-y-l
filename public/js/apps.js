@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
 
     // Magnific Popup
-    $('.parent-container').magnificPopup({
+    $('.galeria-wrapper').magnificPopup({
         delegate: 'a', // child items selector, by clicking on it popup will open
         type: 'image',
         gallery: {
@@ -37,5 +37,10 @@ $(document).ready(function() {
         },
         // other options
     });
+
+    $('.flip-clock-divider.days .flip-clock-label').text('Dias');
+    $('.flip-clock-divider.hours .flip-clock-label').text('Horas');
+    $('.flip-clock-divider.minutes .flip-clock-label').text('Minutos');
+    $('.flip-clock-divider.seconds .flip-clock-label').text('Segundos');
 
 });
