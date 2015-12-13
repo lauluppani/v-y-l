@@ -300,7 +300,11 @@ body ul.mobile-nav li a:hover, body ul.mobile-nav li a:active, body ul.mobile-na
     opacity: 0.8;
     text-decoration: none;
 }
-
+@media only screen and (min-width: 850px) {
+    body ul.mobile-nav {
+        display: none !important;
+    }
+}
 
 
 /* Hero */
@@ -313,7 +317,7 @@ body section#hero {
 }
 body section#hero hgroup h1.section-heading {
     background: url(../images/vitiylucas.svg) no-repeat center center;
-    background-size: 100% 100%;
+    background-size: contain;
     display: block;
     height: 292px;
     margin: 0 auto;
@@ -362,7 +366,7 @@ body section#quote {
 }
 body section#quote h1 {
     background: url(../images/quote.svg) no-repeat center center;
-    background-size: 100% 100%;
+    background-size: contain;
     display: block;
     height: 600px;
     margin: 100px auto 0 auto;
@@ -617,10 +621,10 @@ body section#rsvp .radio-1, body section#rsvp .radio-2 {
     text-align: left;
     margin: 15px 0 15px 0;
 }
-body section#rsvp .form-group input[type='text']{
+body section#rsvp .form-group input[type='text'], body section#rsvp .form-group input[type='email']{
     margin-bottom: 10px;
 }
-body section#rsvp .form-group input[type='text']{
+body section#rsvp .form-group input[type='text'], body section#rsvp .form-group input[type='email']{
     -moz-transition: border 0.3s ease;
     -o-transition: border 0.3s ease;
     -webkit-transition: border 0.3s ease;
@@ -629,9 +633,10 @@ body section#rsvp .form-group input[type='text']{
     border: 2px solid rgba(147, 185, 155, 0.4);
     box-shadow: 0 0 0 transparent;
     font-size: 14px;
-    padding: 25px 10px;
+    height: 100%;
+    padding: 15px 10px;
 }
-body section#rsvp .form-group input[type='text']:focus{
+body section#rsvp .form-group input[type='text']:focus, body section#rsvp .form-group input[type='email']:focus{
     border: 2px solid rgba(147, 185, 155, 0.8);
 }
 body section#rsvp .form-group p.help-block.text-danger{
@@ -889,7 +894,7 @@ body section#galeria .galeria-wrapper .fila.par a:nth-of-type(even){
     width: 30%;
 }
 body section#galeria .galeria-wrapper .fila a:hover{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 body section#galeria .galeria-wrapper .fila a img{
     display: block;

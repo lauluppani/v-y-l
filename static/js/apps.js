@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     // Mobile Nav
     $( "button.navbar-toggle" ).click(function() {
-        $(this).parents().find('ul.mobile-nav').slideToggle(1000);
+        $(this).parents().find('ul.mobile-nav').slideToggle(1000).toggleClass('open');
         $(this).toggleClass('pressed');
         return false;
     });
