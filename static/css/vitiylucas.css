@@ -248,11 +248,17 @@ body a.arrow-down:hover {
 .navbar-default .navbar-toggle span{
     background-color: #93B99B !important;
 }
-.navbar-default .navbar-toggle:hover span, .navbar-default .navbar-toggle:focus span{
+.navbar-default .navbar-toggle:hover span, .navbar-default .navbar-toggle.pressed span{
     background-color: #EBE2C4 !important;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle.pressed {
     background: #93B99B;
+}
+
+@media only screen and (max-width: 850px) {
+    body .navbar-default .navbar-toggle {
+        display: block !important;
+    }
 }
 
 /* Mobile Nav */
@@ -1043,3 +1049,5 @@ body .mfp-arrow.mfp-arrow-right:after{
         margin-left: 15px;
     }
 }
+
+
