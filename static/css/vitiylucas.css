@@ -1049,5 +1049,9 @@ body .mfp-arrow.mfp-arrow-right:after{
         margin-left: 15px;
     }
 }
-
+@media only screen and (max-width: 1024px) {
+    body .mfp-arrow.mfp-arrow-left, body .mfp-arrow.mfp-arrow-right{
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
 
