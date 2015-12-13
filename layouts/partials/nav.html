@@ -16,12 +16,12 @@
             {{ "<!-- /.nav -->" | safeHTML }}
             {{ "<!-- Brand and toggle get grouped for better mobile display -->" | safeHTML }}  
             <div class="navbar-header page-scroll">
- <!--                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button> -->
+                </button>
                 <a class="logo page-scroll" href="#page-top">
                     <span>{{ with .Site.Params.navigation.brand }}{{ . }}{{ end }}</span></a>
             </div>
@@ -40,5 +40,27 @@
             {{ "<!-- /.nav -->" | safeHTML }}
         </div>
         {{ "<!-- /.container-fluid -->" | safeHTML }}
+
+        <!-- Mobile Nav -->
+        <ul class="mobile-nav">
+            <li>
+                <a class="page-scroll" href="#ceremonia">{{ with .Site.Params.navigation.ceremonia }}{{ . }}{{ end }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#rsvp">{{ with .Site.Params.navigation.rsvp }}{{ . }}{{ end }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#regalos">{{ with .Site.Params.navigation.regalos }}{{ . }}{{ end }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#como_llegar">{{ with .Site.Params.navigation.como_llegar }}{{ . }}{{ end }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#galeria">{{ with .Site.Params.navigation.galeria }}{{ . }}{{ end }}</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="#countdown">{{ with .Site.Params.navigation.nos_vemos }}{{ . }}{{ end }}</a>
+            </li>
+        </ul>
     </nav>
 </header>

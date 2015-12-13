@@ -235,6 +235,68 @@ body a.arrow-down:hover {
     opacity: 0.5;
 }
 
+
+/* Hamburger Icon */
+.navbar-default .navbar-toggle {
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    border: 0 none;
+}
+.navbar-default .navbar-toggle span{
+    background-color: #93B99B !important;
+}
+.navbar-default .navbar-toggle:hover span, .navbar-default .navbar-toggle:focus span{
+    background-color: #EBE2C4 !important;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
+    background: #93B99B;
+}
+
+/* Mobile Nav */
+body ul.mobile-nav{
+    border-top: 1px solid rgba(147, 185, 155, 0.5);
+    box-shadow: 0 -1px 10px rgba(147, 185, 155, 0.8);
+    display: none;
+    margin-bottom: 0;
+    padding: 70px 0 0 0;
+}
+body ul.mobile-nav li{
+    border-bottom: 1px dotted rgba(147, 185, 155, 0.8);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body ul.mobile-nav li:first-child{
+    border-top: 1px dotted rgba(147, 185, 155, 0.8);
+}
+body ul.mobile-nav li:last-child{
+    border-bottom: 0 none;
+    margin-bottom: 0;
+}
+body ul.mobile-nav li a{
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #CB9540;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+body ul.mobile-nav li a:hover, body ul.mobile-nav li a:active, body ul.mobile-nav li a:focus{
+    background: rgba(147, 185, 155, 0.3);
+    color: #7B997F;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+
 /* Hero */
 body section#hero {
     background: #93B99B;
@@ -955,7 +1017,7 @@ body footer .copyright p small{
 }
 
 
-
+/* Magnific Popup Custom Styles */
 body .mfp-arrow.mfp-arrow-left:before, body .mfp-arrow.mfp-arrow-right:before{
     border: 0 none !important;
 }
@@ -981,4 +1043,3 @@ body .mfp-arrow.mfp-arrow-right:after{
         margin-left: 15px;
     }
 }
-
