@@ -376,7 +376,7 @@ body section#hero .actions a:last-child {
         padding-top: 100px;
         min-height: 0;
     }
-    body section#hero h1.section-heading{
+    body section#hero hgroup h1.section-heading{
         height: 200px;
     }
     body section#hero .actions {
