@@ -376,6 +376,9 @@ body section#hero .actions a:last-child {
         padding-top: 100px;
         min-height: 0;
     }
+    body section#hero h1.section-heading{
+        height: 200px;
+    }
     body section#hero .actions {
         margin-bottom: 110px;
     }
@@ -761,6 +764,9 @@ body section#regalos .datos p{
     margin: 0;
 }
 @media only screen and (max-width: 600px) {
+    body section#regalos {
+        padding: 50px 0;
+    }
     body section#regalos .datos {
         font-size: 12px;
         line-height: 16px;
