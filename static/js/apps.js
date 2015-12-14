@@ -53,7 +53,7 @@ $(document).ready(function() {
         // }
     });
 		    
-    clock.setTime(4392309);
+    clock.setTime(4095654);
     clock.setCountdown(true);
     clock.start();
     // Changes the language of the labels
