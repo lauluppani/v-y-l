@@ -404,7 +404,6 @@ body section#quote .cartoon-wrapper {
     width: 100%;
 }
 body section#quote .cartoon {
-    border-radius: 50%;
     height: 310px;
     width: 270px;
 }
@@ -1055,7 +1054,9 @@ body footer .copyright a:hover {
 body footer .copyright p small{
     color: #A5795B;
 }
-
+body footer .copyright p small i{
+    color: #E18C78;
+}
 
 /* Magnific Popup Custom Styles */
 body .mfp-arrow.mfp-arrow-left:before, body .mfp-arrow.mfp-arrow-right:before{

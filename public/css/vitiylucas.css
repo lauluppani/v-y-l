@@ -192,16 +192,36 @@ body .action-btn.large{
     padding: 20px 40px;
 }
 
+/* Flowers */
+img.flowers{
+    position: absolute;
+    z-index: 1000;
+}
+img.flowers.left{
+    left: -1000px;
+    bottom: -200px;
+}
+img.flowers.right{
+    right: -1000px;
+    bottom: -200px;
+}
+@media only screen and (max-width: 930px) {
+    img.flowers {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+
 /* Sections */
 @media only screen and (max-width: 768px) {
     body section > .container {
         width: auto;
     }
 }
-/*body section {
-    min-height: 800px;
-}*/
 
+/*  Heading */
 body h1.section-heading {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -248,11 +268,17 @@ body a.arrow-down:hover {
 .navbar-default .navbar-toggle span{
     background-color: #93B99B !important;
 }
-.navbar-default .navbar-toggle:hover span, .navbar-default .navbar-toggle:focus span{
+.navbar-default .navbar-toggle:hover span, .navbar-default .navbar-toggle.pressed span{
     background-color: #EBE2C4 !important;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:active {
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle.pressed {
     background: #93B99B;
+}
+
+@media only screen and (max-width: 850px) {
+    body .navbar-default .navbar-toggle {
+        display: block !important;
+    }
 }
 
 /* Mobile Nav */
@@ -294,20 +320,25 @@ body ul.mobile-nav li a:hover, body ul.mobile-nav li a:active, body ul.mobile-na
     opacity: 0.8;
     text-decoration: none;
 }
-
+@media only screen and (min-width: 850px) {
+    body ul.mobile-nav {
+        display: none !important;
+    }
+}
 
 
 /* Hero */
 body section#hero {
-    background: #93B99B;
+    background: #93B99B url(../images/texture-2.png) repeat left top;
     color: #EBE2C4;
     min-height: 800px;
+    overflow: hidden;
     padding: 150px 20px 0 20px;
     position: relative;
 }
 body section#hero hgroup h1.section-heading {
     background: url(../images/vitiylucas.svg) no-repeat center center;
-    background-size: 100% 100%;
+    background-size: contain;
     display: block;
     height: 292px;
     margin: 0 auto;
@@ -352,11 +383,11 @@ body section#hero .actions a:last-child {
 
 /* Quote */
 body section#quote {
-    background: #D9BF9D;
+    background: #D9BF9D url(../images/texture-2.png) repeat left top;
 }
 body section#quote h1 {
     background: url(../images/quote.svg) no-repeat center center;
-    background-size: 100% 100%;
+    background-size: contain;
     display: block;
     height: 600px;
     margin: 100px auto 0 auto;
@@ -373,10 +404,14 @@ body section#quote .cartoon-wrapper {
     width: 100%;
 }
 body section#quote .cartoon {
-    background: url(../images/cartoon.svg) no-repeat center center;
-    border-radius: 50%;
-    height: 250px;
-    width: 220px;
+    height: 310px;
+    width: 270px;
+}
+body section#quote .left .cartoon {
+    background: url(../images/viti.svg) no-repeat center center;
+}
+body section#quote .right .cartoon {
+    background: url(../images/luke.svg) no-repeat center center;
 }
 body section#quote .left, body section#quote .right, body section#quote .middle {
     display: inline-block;
@@ -431,7 +466,7 @@ body section#quote h2 {
 
 /* Ceremonia */
 body section#ceremonia {
-    background: #D9BF9D;
+    background: #D9BF9D url(../images/texture-2.png) repeat left top;
     padding-top: 60px;
     position: relative;
 }
@@ -611,10 +646,10 @@ body section#rsvp .radio-1, body section#rsvp .radio-2 {
     text-align: left;
     margin: 15px 0 15px 0;
 }
-body section#rsvp .form-group input[type='text']{
+body section#rsvp .form-group input[type='text'], body section#rsvp .form-group input[type='email']{
     margin-bottom: 10px;
 }
-body section#rsvp .form-group input[type='text']{
+body section#rsvp .form-group input[type='text'], body section#rsvp .form-group input[type='email']{
     -moz-transition: border 0.3s ease;
     -o-transition: border 0.3s ease;
     -webkit-transition: border 0.3s ease;
@@ -623,9 +658,10 @@ body section#rsvp .form-group input[type='text']{
     border: 2px solid rgba(147, 185, 155, 0.4);
     box-shadow: 0 0 0 transparent;
     font-size: 14px;
-    padding: 25px 10px;
+    height: 100%;
+    padding: 15px 10px;
 }
-body section#rsvp .form-group input[type='text']:focus{
+body section#rsvp .form-group input[type='text']:focus, body section#rsvp .form-group input[type='email']:focus{
     border: 2px solid rgba(147, 185, 155, 0.8);
 }
 body section#rsvp .form-group p.help-block.text-danger{
@@ -664,7 +700,7 @@ body section#rsvp p small{
 body section#regalos {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background: #E18C78;
+    background: #E18C78 url(../images/texture-1.png) repeat left top;
     color: #ECE9DC;
     font-size: 20px;
     padding: 100px 0;
@@ -883,7 +919,7 @@ body section#galeria .galeria-wrapper .fila.par a:nth-of-type(even){
     width: 30%;
 }
 body section#galeria .galeria-wrapper .fila a:hover{
-    opacity: 0.8;
+    opacity: 0.7;
 }
 body section#galeria .galeria-wrapper .fila a img{
     display: block;
@@ -951,12 +987,15 @@ body section#galeria .galeria-wrapper .fila a#pic-12{
 
 /* Countdown */
 body section#countdown {
-    background: #93B99B;
+    background: #93B99B url(../images/texture-1.png) repeat left top;
     padding: 50px 0;
 }
 body section#countdown h1.section-heading{
     color: #ECE9DC;
     margin-top: 0;
+}
+body section#countdown img{
+    margin: 30px 0 0 0;
 }
 @media only screen and (max-width: 600px) {
     body section#countdown .flip-clock-divider .flip-clock-label {
@@ -1015,7 +1054,9 @@ body footer .copyright a:hover {
 body footer .copyright p small{
     color: #A5795B;
 }
-
+body footer .copyright p small i{
+    color: #E18C78;
+}
 
 /* Magnific Popup Custom Styles */
 body .mfp-arrow.mfp-arrow-left:before, body .mfp-arrow.mfp-arrow-right:before{
@@ -1043,3 +1084,9 @@ body .mfp-arrow.mfp-arrow-right:after{
         margin-left: 15px;
     }
 }
+@media only screen and (max-width: 1024px) {
+    body .mfp-arrow.mfp-arrow-left, body .mfp-arrow.mfp-arrow-right{
+        background: rgba(0, 0, 0, 0.9);
+    }
+}
+

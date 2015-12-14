@@ -2,9 +2,41 @@ var clock;
 
 $(document).ready(function() {
 
+    $( "img.flowers.left" ).animate({
+        left: "-100",
+        bottom: "-10",
+        }, 2000, function() {
+    });
+    $( "img.flowers.right" ).animate({
+        right: "-100",
+        bottom: "-30",
+        }, 2000, function() {
+    });
+
+    if ($(window).width() < 600) {
+        $( "img.flowers.left" ).animate({
+            left: "-60",
+            }, 2000, function() {
+        });
+    }
+    else {
+       // alert('More than 960');
+    }
+    if ($(window).width() < 600) {
+        $( "img.flowers.right" ).animate({
+            right: "-50",
+            // bottom: "-30",
+            }, 2000, function() {
+        });
+    }
+    else {
+       // alert('More than 960');
+    }
+
     // Mobile Nav
     $( "button.navbar-toggle" ).click(function() {
-        $(this).parents().find('ul.mobile-nav').slideToggle(1000);
+        $(this).parents().find('ul.mobile-nav').slideToggle(1000).toggleClass('open');
+        $(this).toggleClass('pressed');
         return false;
     });
 
