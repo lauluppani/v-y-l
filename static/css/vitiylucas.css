@@ -449,13 +449,15 @@ body section#quote h2 {
 }
 @media only screen and (max-width: 600px) {
     body section#quote .left .cartoon, body section#quote .right .cartoon {
+        height: 120px;
         width: 100%;
     }
     body section#quote h1 {
-        height: 400px;
+        height: 350px;
         margin-top: 50px;
     }
     body section#quote .cartoon-wrapper {
+        margin-bottom: 40px;
         margin-top: 0;
     }
     body section#quote h2 {
