@@ -198,12 +198,12 @@ img.flowers{
     z-index: 1000;
 }
 img.flowers.left{
-    left: -100px;
-    bottom: -10px;
+    left: -1000px;
+    bottom: -200px;
 }
 img.flowers.right{
-    right: -100px;
-    bottom: -5px;
+    right: -1000px;
+    bottom: -200px;
 }
 @media only screen and (max-width: 930px) {
     img.flowers {
@@ -211,15 +211,7 @@ img.flowers.right{
         height: auto;
     }
 }
-@media only screen and (max-width: 600px) {
-    img.flowers.left {
-        left: -60px;
-    }
-    img.flowers.right {
-        bottom: -30px;
-        right: -50px;
-    }
-}
+
 
 
 /* Sections */
@@ -337,7 +329,7 @@ body ul.mobile-nav li a:hover, body ul.mobile-nav li a:active, body ul.mobile-na
 
 /* Hero */
 body section#hero {
-    background: #93B99B url(../images/texture.png) repeat left top;
+    background: #93B99B url(../images/texture-2.png) repeat left top;
     color: #EBE2C4;
     min-height: 800px;
     overflow: hidden;
@@ -391,7 +383,7 @@ body section#hero .actions a:last-child {
 
 /* Quote */
 body section#quote {
-    background: #D9BF9D url(../images/texture.png) repeat left top;
+    background: #D9BF9D url(../images/texture-2.png) repeat left top;
 }
 body section#quote h1 {
     background: url(../images/quote.svg) no-repeat center center;
@@ -475,7 +467,7 @@ body section#quote h2 {
 
 /* Ceremonia */
 body section#ceremonia {
-    background: #D9BF9D url(../images/texture.png) repeat left top;
+    background: #D9BF9D url(../images/texture-2.png) repeat left top;
     padding-top: 60px;
     position: relative;
 }
@@ -709,7 +701,7 @@ body section#rsvp p small{
 body section#regalos {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background: #E18C78 url(../images/texture.png) repeat left top;
+    background: #E18C78 url(../images/texture-1.png) repeat left top;
     color: #ECE9DC;
     font-size: 20px;
     padding: 100px 0;
@@ -996,7 +988,7 @@ body section#galeria .galeria-wrapper .fila a#pic-12{
 
 /* Countdown */
 body section#countdown {
-    background: #93B99B url(../images/texture.png) repeat left top;
+    background: #93B99B url(../images/texture-1.png) repeat left top;
     padding: 50px 0;
 }
 body section#countdown h1.section-heading{
