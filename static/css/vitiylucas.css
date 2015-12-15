@@ -835,13 +835,18 @@ body section#como_llegar .map  {
     top: 0;
     width: 100%;
 }
+body section#como_llegar .map-wrapper  {
+    position: absolute;
+}
 @media only screen and (max-width: 992px) {
-    body section#como_llegar .map {
-        height: 300px;
+    body section#como_llegar .map-wrapper  {
         position: relative;
     }
+    body section#como_llegar .map {
+        height: 300px;
+    }
     body section#como_llegar #map-escobar {
-        display: none;
+        left: -100%;
     }
 }
 body section#como_llegar .container .row > .direcciones  {
@@ -852,6 +857,9 @@ body section#como_llegar .container .row > .direcciones  {
 @media only screen and (max-width: 992px) {
     body section#como_llegar > .container {
         width: 100%;
+    }
+    body section#como_llegar .container .row > .direcciones {
+        background: #EBE7DB;
     }
 }
 body section#como_llegar .container .row > .direcciones h1.section-heading {
