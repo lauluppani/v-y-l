@@ -828,7 +828,7 @@ body section#como_llegar {
     color: #BF967A;
     position: relative;
 }
-body section#como_llegar #map  {
+body section#como_llegar .map  {
     height: 100%;
     left: 0;
     position: absolute;
@@ -836,9 +836,12 @@ body section#como_llegar #map  {
     width: 100%;
 }
 @media only screen and (max-width: 992px) {
-    body section#como_llegar #map {
+    body section#como_llegar .map {
         height: 300px;
         position: relative;
+    }
+    body section#como_llegar #map-escobar {
+        display: none;
     }
 }
 body section#como_llegar .container .row > .direcciones  {
@@ -852,35 +855,70 @@ body section#como_llegar .container .row > .direcciones  {
     }
 }
 body section#como_llegar .container .row > .direcciones h1.section-heading {
-    color: #7B997F;
+    color: #BF967A;
 }
 body section#como_llegar .container .row > .direcciones i{
     color: #E18C78;
     font-size: 30px;
     margin-bottom: 15px;
 }
-body section#como_llegar .container .row > .direcciones p.direccion{
-    font-size: 20px;
+body section#como_llegar .container .row > .direcciones .opciones {
+    font-size: 0;
+}
+body section#como_llegar .container .row > .direcciones .block{
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    padding: 10px;
+    width: 50%;
+}
+body section#como_llegar .container .row > .direcciones .block:first-child{
+
+}
+body section#como_llegar .container .row > .direcciones .block:last-child{
+    border-left: 1px dotted #BF967A;
+}
+body section#como_llegar .container .row > .direcciones a.direccion{
+    -moz-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    color: #7B997F;
+    font-size: 18px;
     line-height: 22px;
 }
-body section#como_llegar .container .row > .direcciones p.direccion strong{
+body section#como_llegar .container .row > .direcciones a.direccion:not(.active){
+    color: #BF967A;
+}
+body section#como_llegar .container .row > .direcciones a.direccion:hover{
+    opacity: 0.7;
+}
+body section#como_llegar .container .row > .direcciones a.direccion:hover, body section#como_llegar .container .row > .direcciones a.direccion:active, body section#como_llegar .container .row > .direcciones a.direccion:focus{
+    text-decoration: none;
+}
+body section#como_llegar .container .row > .direcciones a.direccion strong{
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     display: block;
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 5px;
 }
-body section#como_llegar .container .row > .direcciones p.direccion strong > span{
-    font-weight: 400;
-}
-body section#como_llegar .container .row > .direcciones p.direccion strong + span{
+body section#como_llegar .container .row > .direcciones a.direccion strong > span{
     display: block;
-    font-size: 14px;
-    padding-bottom: 20px;
-    border-bottom: 1px dotted #BF967A;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 5px;
 }
 body section#como_llegar .container .row > .direcciones p.instruccion{
-    padding-top: 20px;
+    color: #7B997F;
+    margin-top: 20px;
 }
 body section#como_llegar .container .row > .direcciones ul.hoteles{
     font-size: 0;

@@ -5,17 +5,30 @@
             <div class="col-md-5 text-center direcciones">
                 <h1 class="section-heading">{{ with .Site.Params.como_llegar.title }}{{ . }}{{ end }}</h1>
                 <i class="fa fa-map-marker"></i>
-                <p class="direccion">
-                    <strong>
-                        Club House
-                        <br>
-                        Campo Grande 
-                        <span>Club de Campo</span>
-                    </strong>
-                    <span>Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina</span>
-                </p>
+                <div class="opciones">
+                    <div class="block">
+                        <a href="" class="direccion active" id="opcionA">
+                            <strong>
+                                Opción A
+                                <span>Por Pilar</span>
+                            </strong>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="" class="direccion" id="opcionB">
+                            <strong>
+                                Opción B
+                                <span>
+                                    Por Ruta 9
+                                    <br>
+                                    (Acceso Norte ramal Escobar)
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </div>
                 <p class="instruccion">
-                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje, subir a la derecha en el km. 45 y tomar el camino asfaltado.
+                    Salir en la bajada del km 44.5, y tomar por calle Florida. Seguir esta calle, y en la única bifurcación que se presenta, girar a la derecha. Al terminar la calle se encuentra la entrada a dos barrios, tomar la de la izquierda hacia Campo Grande.
                 </p>
                 <h1 class="section-heading">{{ with .Site.Params.como_llegar.subtitle }}{{ . }}{{ end }}</h1>
                 <ul class="hoteles">
@@ -41,5 +54,6 @@
             </div>
         </div>
     </div>
-    <div id="map"></div>
+    <div class="map" id="map-escobar"></div>
+    <div class="map" id="map-pilar"></div>
 </section>
