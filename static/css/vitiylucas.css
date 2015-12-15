@@ -452,11 +452,9 @@ body section#quote h2 {
 }
 @media only screen and (max-width: 600px) {
     body section#quote .left .cartoon, body section#quote .right .cartoon {
-        height: 120px;
         width: 100%;
     }
     body section#quote h1 {
-        height: 350px;
         margin-top: 50px;
     }
     body section#quote .cartoon-wrapper {
@@ -468,6 +466,15 @@ body section#quote h2 {
         font-size: 20px;
     }
 }
+@media only screen and (max-width: 320px) {
+    body section#quote .left .cartoon, body section#quote .right .cartoon {
+        height: 120px;
+    }
+    body section#quote h1 {
+        height: 350px;
+    }
+}
+
 
 /* Ceremonia */
 body section#ceremonia {
@@ -746,14 +753,25 @@ body section#regalos #quiero-ayudar.pressed{
         padding: 15px 10px;
     }
 }
-body section#regalos .datos{
-    border-top: 1px dotted rgba(255, 255, 255, 0.5);
+body section#regalos .datos-wrapper{
     display: none;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 0;
+}
+body section#regalos .datos{
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    *display: inline;
+    *vertical-align: auto;
+    border-right: 1px dotted rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 18px;
     margin: 30px auto 0 auto;
-    max-width: 500px;
-    padding-top: 30px;
+    padding: 15px 20px;
+    width: 40%;
+}
+body section#regalos .datos:nth-of-type(2){
+    border-right: 0 none;
 }
 body section#regalos .datos h2{
     font-size: 16px;
@@ -762,6 +780,20 @@ body section#regalos .datos h2{
 }
 body section#regalos .datos p{
     margin: 0;
+}
+@media only screen and (max-width: 1024px) {
+    body section#regalos .datos-wrapper .datos {
+        border-right: 0 none;
+        border-top: 1px dotted rgba(255, 255, 255, 0.5);
+        display: block;
+        max-width: 500px;
+        padding: 25px 0;
+        width: auto;
+    }
+    body section#regalos .datos-wrapper .datos:nth-of-type(2) {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
 }
 @media only screen and (max-width: 600px) {
     body section#regalos {
@@ -1058,6 +1090,9 @@ body footer .copyright a {
 body footer .copyright a:hover {
     color: #7B997F;
     text-decoration: none;
+}
+body footer .copyright span{
+    color: #A5795B;
 }
 body footer .copyright p small{
     color: #A5795B;

@@ -41,21 +41,16 @@ $(document).ready(function() {
     });
 
     // Flipclock Countdown
-	var clock;
-
-	clock = $('.your-clock').FlipClock({
+    var currentDate = new Date();
+    var futureDate = new Date(2016,0,30,18,30,00); // (yyyy,m,d) //
+    var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+    var clock = $('.your-clock').FlipClock(diff, {
         clockFace: 'DailyCounter',
-        autoStart: false,
-        // callbacks: {
-        // 	stop: function() {
-        // 		$('.message').html('The clock has stopped!')
-        // 	}
-        // }
+        countdown: true
     });
-		    
-    clock.setTime(4095654);
-    clock.setCountdown(true);
+
     clock.start();
+
     // Changes the language of the labels
     $('.flip-clock-divider.days .flip-clock-label').text('Dias');
     $('.flip-clock-divider.hours .flip-clock-label').text('Horas');
@@ -64,9 +59,9 @@ $(document).ready(function() {
 
 
     // Hide & Show CBU Info
-    $('.datos').hide();
+    $('.datos-wrapper').hide();
     $( "#quiero-ayudar" ).click(function() {
-        $(this).prev('.datos').fadeIn(1000);
+        $(this).prev('.datos-wrapper').fadeIn(1000);
         $(this).addClass('pressed');
         $(this).text('Muchas gracias!').append('<i class="fa fa-thumbs-o-up"></i>');
         return false;
