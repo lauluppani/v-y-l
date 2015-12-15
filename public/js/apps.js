@@ -2,6 +2,25 @@ var clock;
 
 $(document).ready(function() {
 
+    $( "a#opcionA" ).click(function() {
+        $(this).addClass('active');
+        $(this).parent().next().find('a#opcionB').removeClass('active');
+        $(this).parents().find('#map-pilar').fadeIn(1000);
+        $(this).parents().find('#map-escobar').fadeOut(1000);
+        $(this).parents().find('p.instruccion').text('Salir en la bajada del km 44.5, y tomar por calle Florida. Seguir esta calle, y en la única bifurcación que se presenta, girar a la derecha. Al terminar la calle se encuentra la entrada a dos barrios, tomar la de la izquierda hacia Campo Grande.');
+        return false;
+    });
+    $( "a#opcionB" ).click(function() {
+        $(this).addClass('active');
+        $(this).parent().prev().find('a#opcionA').removeClass('active');
+        $(this).parents().find('#map-escobar').fadeIn(1000);
+        $(this).parents().find('#map-pilar').fadeOut(1000);
+        $(this).parents().find('p.instruccion').text('Bajar en salida a Ruta 25. Transitar por Ruta 25, hasta calle Alborada y girar a la izquierda. Tomar Alborada hasta que se corta y obliga a girar a la derecha, por calle Matacos. A 200 mts sobre mano izquierda está la entrada a Campo Grande.');
+        return false;
+    });
+
+
+
     $( "img.flowers.left" ).animate({
         left: "-100",
         bottom: "-10",
@@ -41,21 +60,16 @@ $(document).ready(function() {
     });
 
     // Flipclock Countdown
-	var clock;
-
-	clock = $('.your-clock').FlipClock({
+    var currentDate = new Date();
+    var futureDate = new Date(2016,0,30,18,30,00); // (yyyy,m,d) //
+    var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+    var clock = $('.your-clock').FlipClock(diff, {
         clockFace: 'DailyCounter',
-        autoStart: false,
-        // callbacks: {
-        // 	stop: function() {
-        // 		$('.message').html('The clock has stopped!')
-        // 	}
-        // }
+        countdown: true
     });
-		    
-    clock.setTime(4095654);
-    clock.setCountdown(true);
+
     clock.start();
+
     // Changes the language of the labels
     $('.flip-clock-divider.days .flip-clock-label').text('Dias');
     $('.flip-clock-divider.hours .flip-clock-label').text('Horas');
@@ -64,9 +78,9 @@ $(document).ready(function() {
 
 
     // Hide & Show CBU Info
-    $('.datos').hide();
+    $('.datos-wrapper').hide();
     $( "#quiero-ayudar" ).click(function() {
-        $(this).prev('.datos').fadeIn(1000);
+        $(this).prev('.datos-wrapper').fadeIn(1000);
         $(this).addClass('pressed');
         $(this).text('Muchas gracias!').append('<i class="fa fa-thumbs-o-up"></i>');
         return false;

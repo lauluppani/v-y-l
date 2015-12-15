@@ -25,46 +25,7 @@
 <link rel="stylesheet" href="http://vitiylucas.com/css/magnific-popup.css">
 <!-- Google Maps -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwS2Ns4KjUiA5o40fbaJuCxiXo5v0DQfU"></script>
-<script type="text/javascript">
-    
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-        
-        
-        var mapOptions = {
-            
-            zoom: 13,
-            scrollwheel: false,
-            
-            
-            center: new google.maps.LatLng(-34.396839, -58.828213), 
-
-            
-            
-            styles: [	{		"featureType":"landscape",		"stylers":[			{				"hue":"#FFBB00"			},			{				"saturation":43.400000000000006			},			{				"lightness":37.599999999999994			},			{				"gamma":1			}		]	},	{		"featureType":"road.highway",		"stylers":[			{				"hue":"#FFC200"			},			{				"saturation":-61.8			},			{				"lightness":45.599999999999994			},			{				"gamma":1			}		]	},	{		"featureType":"road.arterial",		"stylers":[			{				"hue":"#FF0300"			},			{				"saturation":-100			},			{				"lightness":51.19999999999999			},			{				"gamma":1			}		]	},	{		"featureType":"road.local",		"stylers":[			{				"hue":"#FF0300"			},			{				"saturation":-100			},			{				"lightness":52			},			{				"gamma":1			}		]	},	{		"featureType":"water",		"stylers":[			{				"hue":"#0078FF"			},			{				"saturation":-13.200000000000003			},			{				"lightness":2.4000000000000057			},			{				"gamma":1			}		]	},	{		"featureType":"poi",		"stylers":[			{				"hue":"#00FF6A"			},			{				"saturation":-1.0989010989011234			},			{				"lightness":11.200000000000017			},			{				"gamma":1			}		]	}]
-        };
-
-        
-        
-        var mapElement = document.getElementById('map');
-
-        
-        var map = new google.maps.Map(mapElement, mapOptions);
-
-        
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-34.396839, -58.828213),
-            map: map
-        });
-
-		google.maps.event.addDomListener(window, "resize", function() {
-		    var center = map.getCenter();
-		    google.maps.event.trigger(map, "resize");
-		    map.setCenter(center); 
-		});
-    }
-</script>
+<script type="text/javascript" src="http://vitiylucas.com/js/maps.js"></script>
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -205,12 +166,9 @@
                 <div class="block lugar">
                     <p>
                         <strong>
-                            Club House - Campo Grande
+                            Campo Grande
                             <span>Club de Campo</span>
                         </strong>
-                    </p>
-                    <p>
-                        Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina
                     </p>
                 </div>
                 <div class="block">
@@ -255,7 +213,7 @@
                         <p class="help-block text-danger"></p>
                     </div>
                     <div class="form-group col-md-12">
-                        <input type="text" class="form-control" placeholder="Cuál es tu canción favorita?" name="song">
+                        <input type="text" class="form-control" placeholder="Qué tema te gustaría escuchar?" name="song">
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -289,21 +247,40 @@
                     <strong>Salud, dinero y amor...</strong>
                     Por suerte estamos sanos y muy enamorados, así que podés ayudarnos con lo que nos falta!
                 </p>
-                <div class="datos">
-                    <h2>Banco Santander Rio</h2>
-                    <p>
-                        María Victoria Perusini - 
-                        <strong>DNI</strong>
-                        30786240
-                    </p>
-                    <p>
-                        <strong>Número de Cuenta:</strong>
-                        Cuenta Unica 091-422630/7
-                    </p>
-                    <p>
-                        <strong>Número de CBU:</strong>
-                        0720091588000042263072
-                    </p>
+                <div class="datos-wrapper">
+                    <div class="datos">
+                        <h2>Banco Santander Rio</h2>
+                        <p>
+                            María Victoria Perusini - 
+                            <strong>DNI</strong>
+                            30786240
+                        </p>
+                        <p>
+                            <strong>Número de Cuenta:</strong>
+                            Cuenta Unica 091-422630/7
+                        </p>
+                        <p>
+                            <strong>Número de CBU:</strong>
+                            0720091588000042263072
+                        </p>
+                    </div>
+                    <div class="datos">
+                        <h2>Banco Citibank</h2>
+                        <p>
+                            Lucas Javier Luppani - 
+                            <strong>DNI</strong>
+                            30314471
+                        </p>
+                        <p>
+                            <strong>Número de Cuenta:</strong>
+                            5232183316
+                        </p>
+                        <p>
+                            <strong>Número de CBU:</strong>
+                            0167777100052321833166
+                        </p>
+                    </div>
+                    <p class="agradecimientos">Para que podamos identificar tu regalo y agradecerte, <a href="mailto:vitiylucas+regalos@gmail.com">envianos un mail.</a></p>
                 </div>
                 <a href="" id="quiero-ayudar" class="action-btn large">Quiero ayudar</a>
             </div>
@@ -318,17 +295,30 @@
             <div class="col-md-5 text-center direcciones">
                 <h1 class="section-heading">Cómo llegar</h1>
                 <i class="fa fa-map-marker"></i>
-                <p class="direccion">
-                    <strong>
-                        Club House
-                        <br>
-                        Campo Grande 
-                        <span>Club de Campo</span>
-                    </strong>
-                    <span>Alborada 1629 Villa Rosa, Pilar, Buenos Aires, Argentina</span>
-                </p>
+                <div class="opciones">
+                    <div class="block">
+                        <a href="" class="direccion active" id="opcionA">
+                            <strong>
+                                Opción A
+                                <span>Por Pilar</span>
+                            </strong>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="" class="direccion" id="opcionB">
+                            <strong>
+                                Opción B
+                                <span>
+                                    Por Ruta 9
+                                    <br>
+                                    (Acceso Norte ramal Escobar)
+                                </span>
+                            </strong>
+                        </a>
+                    </div>
+                </div>
                 <p class="instruccion">
-                    Desde el ramal Pilar de Panamericana, 3 minutos luego de pasar el peaje, subir a la derecha en el km. 45 y tomar el camino asfaltado.
+                    Salir en la bajada del km 44.5, y tomar por calle Florida. Seguir esta calle, y en la única bifurcación que se presenta, girar a la derecha. Al terminar la calle se encuentra la entrada a dos barrios, tomar la de la izquierda hacia Campo Grande.
                 </p>
                 <h1 class="section-heading">Dónde quedarse</h1>
                 <ul class="hoteles">
@@ -354,7 +344,8 @@
             </div>
         </div>
     </div>
-    <div id="map"></div>
+    <div class="map" id="map-escobar"></div>
+    <div class="map" id="map-pilar"></div>
 </section>
 
         <!-- Galería Section -->
@@ -421,7 +412,7 @@
         </div>
         <div class="row copyright">
             <div class="col-lg-12 text-center">
-                <a href="mailto:vitiylucas+secasan@gmail.com">vitiylucas+secasan@gmail.com</a>
+                <span>Cualquier consulta, </span><a href="mailto:vitiylucas@gmail.com">envianos un mail.</a>
                 <p>
                     <small>©<script type="text/javascript">document.write(new Date().getFullYear());</script> Viti y Lucas. Todos los derechos reservados.</small>
                 </p>
@@ -430,7 +421,7 @@
                         Designed with
                         <i class="fa fa-heart"></i>
                         by
-                        <a href="mailto:lauluppani@gmail.com">Lau Luppani.</a>
+                        <a href="https://twitter.com/lauluppani" target="_blank">@lauluppani</a>
                     </small>
                 </p>
             </div>
