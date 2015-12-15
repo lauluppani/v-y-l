@@ -19,14 +19,6 @@ $(document).ready(function() {
         return false;
     });
 
-    if ($(window).width() < 992) {
-        $('a#opcionB.active').parents().find('#map-escobar').css('left', '0');
-    }
-    else {
-       // alert('More than 960');
-    }
-
-
     $( "img.flowers.left" ).animate({
         left: "-100",
         bottom: "-10",

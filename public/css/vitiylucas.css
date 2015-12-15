@@ -835,18 +835,13 @@ body section#como_llegar .map  {
     top: 0;
     width: 100%;
 }
-body section#como_llegar .map-wrapper  {
-    position: absolute;
-}
 @media only screen and (max-width: 992px) {
-    body section#como_llegar .map-wrapper  {
-        position: relative;
-    }
     body section#como_llegar .map {
         height: 300px;
+        position: relative;
     }
     body section#como_llegar #map-escobar {
-        left: -100%;
+        display: none;
     }
 }
 body section#como_llegar .container .row > .direcciones  {
