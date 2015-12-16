@@ -635,7 +635,7 @@ body section#rsvp > .container:before, body section#rsvp > .container:after {
     background: url(../images/envelope-lines.svg) repeat-x center center;
     content: "";
     height: 8px;
-    width: 100%;
+    width: 100% !important;
     position: absolute;
     left: 0;
 }
