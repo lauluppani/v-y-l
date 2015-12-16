@@ -632,7 +632,7 @@ body section#rsvp > .container{
     }
 }
 body section#rsvp > .container:before, body section#rsvp > .container:after {
-    background: url(../images/envelope-lines.svg) no-repeat -20px top;
+    background: url(../images/envelope-lines.svg) repeat-x center center;
     content: "";
     height: 8px;
     width: 100%;
@@ -841,7 +841,7 @@ body section#como_llegar .map  {
         position: relative;
     }
     body section#como_llegar #map-escobar {
-        display: none;
+        height: 0;
     }
 }
 body section#como_llegar .container .row > .direcciones  {

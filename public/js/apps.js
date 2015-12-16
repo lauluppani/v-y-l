@@ -19,6 +19,19 @@ $(document).ready(function() {
         return false;
     });
 
+    $(window).resize(function() {
+      if ($(window).width() < 992) {
+         $( "a#opcionB" ).click(function() {
+            $(this).parents().find('#map-escobar').css('height' , '300px');
+            return false;
+        });
+      }
+     else {
+        // alert('More than 960');
+     }
+    });
+
+
     $( "img.flowers.left" ).animate({
         left: "-100",
         bottom: "-10",
@@ -30,25 +43,31 @@ $(document).ready(function() {
         }, 2000, function() {
     });
 
-    if ($(window).width() < 600) {
+
+    $(window).resize(function() {
+      if ($(window).width() < 600) {
         $( "img.flowers.left" ).animate({
             left: "-60",
             }, 2000, function() {
         });
-    }
-    else {
-       // alert('More than 960');
-    }
-    if ($(window).width() < 600) {
+      }
+     else {
+        // alert('More than 960');
+     }
+    });
+
+    $(window).resize(function() {
+      if ($(window).width() < 600) {
         $( "img.flowers.right" ).animate({
             right: "-50",
             // bottom: "-30",
             }, 2000, function() {
         });
-    }
-    else {
-       // alert('More than 960');
-    }
+      }
+     else {
+        // alert('More than 960');
+     }
+    });
 
     // Mobile Nav
     $( "button.navbar-toggle" ).click(function() {

@@ -632,7 +632,7 @@ body section#rsvp > .container{
     }
 }
 body section#rsvp > .container:before, body section#rsvp > .container:after {
-    background: url(../images/envelope-lines.svg) no-repeat -20px top;
+    background: url(../images/envelope-lines.svg) repeat-x center center;
     content: "";
     height: 8px;
     width: 100%;
@@ -836,12 +836,9 @@ body section#como_llegar .map  {
     width: 100%;
 }
 @media only screen and (max-width: 992px) {
-    body section#como_llegar .map {
-        height: 300px;
+    body section#como_llegar .map-wrapper  {
         position: relative;
-    }
-    body section#como_llegar #map-escobar {
-        display: none;
+        height: 300px;
     }
 }
 body section#como_llegar .container .row > .direcciones  {
