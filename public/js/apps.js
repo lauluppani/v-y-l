@@ -5,32 +5,19 @@ $(document).ready(function() {
     $( "a#opcionA" ).click(function() {
         $(this).addClass('active');
         $(this).parent().next().find('a#opcionB').removeClass('active');
-        $(this).parents().find('#map-pilar').fadeIn(1000);
-        $(this).parents().find('#map-escobar').fadeOut(1000);
-        $(this).parents().find('p.instruccion').text('Salir en la bajada del km 44.5, y tomar por calle Florida. Seguir esta calle, y en la única bifurcación que se presenta, girar a la derecha. Al terminar la calle se encuentra la entrada a dos barrios, tomar la de la izquierda hacia Campo Grande.');
+        $(this).parents().find('#map-pilar').css('opacity' , '1');
+        $(this).parents().find('#map-escobar').css('opacity' , '0');
+        $(this).parents().find('p.instruccion').text('Salir en la bajada del km 45, y tomar por calle Florida. Seguir esta calle, y en la única bifurcación que se presenta, girar a la derecha. Al terminar la calle se encuentra la entrada a dos barrios, tomar la de la izquierda hacia Campo Grande.');
         return false;
     });
     $( "a#opcionB" ).click(function() {
         $(this).addClass('active');
         $(this).parent().prev().find('a#opcionA').removeClass('active');
-        $(this).parents().find('#map-escobar').fadeIn(1000);
-        $(this).parents().find('#map-pilar').fadeOut(1000);
+        $(this).parents().find('#map-escobar').css('opacity' , '1');
+        $(this).parents().find('#map-pilar').css('opacity' , '0');
         $(this).parents().find('p.instruccion').text('Bajar en salida a Ruta 25. Transitar por Ruta 25, hasta calle Alborada y girar a la izquierda. Tomar Alborada hasta que se corta y obliga a girar a la derecha, por calle Matacos. A 200 mts sobre mano izquierda está la entrada a Campo Grande.');
         return false;
     });
-
-    $(window).resize(function() {
-      if ($(window).width() < 992) {
-         $( "a#opcionB" ).click(function() {
-            $(this).parents().find('#map-escobar').css('height' , '300px');
-            return false;
-        });
-      }
-     else {
-        // alert('More than 960');
-     }
-    });
-
 
     $( "img.flowers.left" ).animate({
         left: "-100",
@@ -117,3 +104,4 @@ $(document).ready(function() {
 
 
 });
+

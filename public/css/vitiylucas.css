@@ -836,12 +836,9 @@ body section#como_llegar .map  {
     width: 100%;
 }
 @media only screen and (max-width: 992px) {
-    body section#como_llegar .map {
-        height: 300px;
+    body section#como_llegar .map-wrapper  {
         position: relative;
-    }
-    body section#como_llegar #map-escobar {
-        height: 0;
+        height: 300px;
     }
 }
 body section#como_llegar .container .row > .direcciones  {
